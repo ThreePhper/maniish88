@@ -249,8 +249,8 @@ color: #f7931a;
 font-weight: bold;
 text-align: center;}
 .custom-howitworks-step-info-text{padding-left:10px;padding-right:0px;}
-.custom-howitworks-step-title{font-size:14px !important;font-weight:bold;}
-.custom-howitworks-step-subtitle{font-size:14px;}
+.custom-howitworks-step-title{font-size:18px;font-weight:bold;}
+.custom-howitworks-step-subtitle{font-size:16px;font-weight: 400}
 
 #make_choice{text-align:center;}
 .col-home-div{text-align:center;padding-top:15px;padding-bottom:15px;}
@@ -289,7 +289,7 @@ text-align: center;}
 padding-right: 10px;*/font-size:30px;}
 #rent_requirement{color:#fff;padding-right: 0;margin-bottom:0px;}
 #rent_requirement1{color:#fff;padding-right: 0;margin-bottom:0px;}
-.contact-form-single-div-btn{text-align:center;margin-top:50px;}
+.contact-form-single-div-btn{text-align:center;margin-top:50px;margin-bottom: 50px;}
 .contact-form input,.contact-form textarea{border-radius:0px;}
 
 .view{text-align:center;margin-top: 42px;

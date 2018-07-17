@@ -2315,8 +2315,8 @@ border-color: #d9534f;
     top: 120px;
     margin-top: -62px;
 }
-.howitworks-step-arrow-left:after { left: -10px; }
-.howitworks-step-arrow-right:after { right: -10px; }
+.howitworks-step-arrow-left:after { left: 0px; }
+.howitworks-step-arrow-right:after { right: 0px; }
 @media (max-width: 991px) {
     .howitworks-step-arrow-left:after,
     .howitworks-step-arrow-right:after {

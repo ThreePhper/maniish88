@@ -39,7 +39,7 @@
 
 	  gtag('config', 'UA-117678831-1');
 	</script>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 <body>
 

@@ -25,143 +25,131 @@ require_once 'header.php';
 			<!-- <h3 class="section-title">HOW IT WORKS</h3> -->
 			<p class="how_text1">Here we will explain how this process actually works:</p>
 
-
-			<div class="col-md-3 col-sm-3 col-xs-12 howitworks-step howitworks-step-arrow-right no-left-right-padding" >
-				<div class="howitworks-step-img">
-					<div class="animation-box a-hiw-1"> <img src="./asset/howitworks_step_1.png" alt="How it works"> <img src="./asset/cursor.png" class="a-hiw-1_cursor" alt="How it works"><img src="">
-						<div class="a-hiw-1_button">Register</div>
+			<div class="row">
+				<div class="col-md-4 col-sm-4 col-xs-12 howitworks-step howitworks-step-arrow-right no-left-right-padding" >
+					<div class="howitworks-step-img">
+						<div class="animation-box a-hiw-1"> <img src="./asset/howitworks_step_1.png" alt="How it works"> <img src="./asset/cursor.png" class="a-hiw-1_cursor" alt="How it works"><img src="">
+							<div class="a-hiw-1_button">Register</div>
+						</div>
 					</div>
-				</div>
-                <!--<div class="howitworks-step-info">
-                    <div class="howitworks-step-number">1</div>
-                    <div class="howitworks-step-title">You register on cloud hashing</div>
-                    <div class="howitworks-step-subtitle">It takes only 2 minutes</div>
-                </div>-->
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 custom-howitworks-step-info no-left-right-padding">
-                	<div class="custom-howitworks-step-number col-lg-2 col-md-2 col-sm-2 col-xs-2 no-left-right-padding">
-                		<div class="custom_sl_no">1</div>
-                	</div>
-                	<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 custom-howitworks-step-info-text">
-                		<div class="custom-howitworks-step-title">You register on cloud hashing</div>
-                		<div class="custom-howitworks-step-subtitle">It takes only 2 minutes</div>
-                	</div>
-                </div>
-            </div>
-            <div class="col-md-1 col-sm-1 hidden-xs  how-it-work-arrow-div">
-            	<img src="asset/howitworks_step_arrow.png" alt="How it works">
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-12 howitworks-step howitworks-step-arrow-right no-left-right-padding">
-            	<div class="howitworks-step-img">
-            		<div class="animation-box a-hiw-2"> <img src="./asset/howitworks_step_2.png" alt="How it works"> <img src="./asset/howitworks_step_2_arrow.png" class="a-hiw-2_arrow" alt="How it works">
-            			<div class="a-hiw-2_label">GH/s</div>
-            		</div>
-            	</div>
-                <!--<div class="howitworks-step-info">
-                    <div class="howitworks-step-number">2</div>
-                    <div class="howitworks-step-title">Choose a plan</div>
-                    <div class="howitworks-step-subtitle">More power, more bitcoins</div>
-                </div>-->
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 custom-howitworks-step-info no-left-right-padding">
-                	<div class="custom-howitworks-step-number col-lg-2 col-md-2 col-sm-2 col-xs-2 no-left-right-padding">
-                		<div class="custom_sl_no">2</div>
-                	</div>
-                	<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 custom-howitworks-step-info-text">
-                		<div class="custom-howitworks-step-title">Choose a plan</div>
-                		<div class="custom-howitworks-step-subtitle">More power, more bitcoins</div>
-                	</div>
-                </div>
-            </div>
-            <div class="col-md-1 col-sm-1  hidden-xs how-it-work-arrow-div">
-            	<img src="asset/howitworks_step_arrow.png" alt="How it works">
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-12 howitworks-step howitworks-step-arrow-right no-left-right-padding">
-            	<div class="howitworks-step-img">
-            		<div class="animation-box a-hiw-3"> <img src="./asset/howitworks_step_3.png" class="a-hiw-3_cart"> <img src="./asset/howitworks_step_3_doc.png" class="a-hiw-3_doc">
-            			<div class="a-hiw-2_label">GH/s</div>
-            		</div>
-            	</div>
-                <!--<div class="howitworks-step-info">
-                    <div class="howitworks-step-number">3</div>
-                    <div class="howitworks-step-title">You pay</div>
-                    <div class="howitworks-step-subtitle">for your new contract</div>
-                </div>-->
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 custom-howitworks-step-info no-left-right-padding">
-                	<div class="custom-howitworks-step-number col-lg-2 col-md-2 col-sm-2 col-xs-2 no-left-right-padding">
-                		<div class="custom_sl_no">3</div>
-                	</div>
-                	<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 custom-howitworks-step-info-text">
-                		<div class="custom-howitworks-step-title">You pay</div>
-                		<div class="custom-howitworks-step-subtitle">for your new contract</div>
-                	</div>
-                </div>
-            </div>
-            <div class="col-md-1 col-sm-1 hidden-xs how-it-work-arrow-div">
-            	<img src="asset/howitworks_step_arrow.png">
-            </div>
-
-            <div class="col-md-3 col-sm-3 col-xs-12 howitworks-step howitworks-step-arrow-left no-left-right-padding">
-            	<div class="howitworks-step-img">
-            		<div class="animation-box a-hiw-4"> <img src="./asset/howitworks_step_4.png"> <img src="./asset/howitworks_step_4_ping.png" class="a-hiw-4_ping"> <img src="./asset/howitworks_step_4_light.png" class="a-hiw-4_light"> </div>
-            	</div>
-                <!--<div class="howitworks-step-info">
-                    <div class="howitworks-step-number">4</div>
-                    <div class="howitworks-step-title">We send your order</div>
-                    <div class="howitworks-step-subtitle">to huge bitcoin mining data centers located in Europe</div>
-                </div>-->
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 custom-howitworks-step-info no-left-right-padding">
-                	<div class="custom-howitworks-step-number col-lg-2 col-md-2 col-sm-2 col-xs-2 no-left-right-padding">
-                		<div class="custom_sl_no">4</div>
-                	</div>
-                	<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 custom-howitworks-step-info-text">
-                		<div class="custom-howitworks-step-title">We send your order</div>
-                		<div class="custom-howitworks-step-subtitle">to huge bitcoin mining data centers located in Europe</div>
-                	</div>
-                </div>
-            </div>
-            <div class="col-md-1 col-sm-1 hidden-xs how-it-work-arrow-div">
-            	<img src="asset/howitworks_step_arrow.png">
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-12 howitworks-step howitworks-step-arrow-left no-left-right-padding">
-            	<div class="howitworks-step-img">
-            		<div class="animation-box a-hiw-5"> <img src="./asset/howitworks_step_5.png"> <img src="./asset/howitworks_step_5_coins.png" class="a-hiw-5_coins"> </div>
-            	</div>
-                <!--<div class="howitworks-step-info">
-                    <div class="howitworks-step-number">5</div>
-                    <div class="howitworks-step-title">The mining process begins</div>
-                    <div class="howitworks-step-subtitle">on high-end equipment with 100% uptime</div>
-                </div>-->
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 custom-howitworks-step-info no-left-right-padding">
-                	<div class="custom-howitworks-step-number col-lg-2 col-md-2 col-sm-2 col-xs-2 no-left-right-padding">
-                		<div class="custom_sl_no">5</div>
-                	</div>
-                	<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 custom-howitworks-step-info-text">
-                		<div class="custom-howitworks-step-title">The mining process begins</div>
-                		<div class="custom-howitworks-step-subtitle">on high-end equipment with 100% uptime</div>
-                	</div>
-                </div>
-            </div>
-            <div class="col-md-1 col-sm-1 hidden-xs how-it-work-arrow-div">
-            	<img src="asset/howitworks_step_arrow.png">
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-12 howitworks-step howitworks-step-arrow-left no-left-right-padding">
-            	<div class="howitworks-step-img">
-            		<div class="animation-box a-hiw-6"> <img src="./asset/howitworks_step_6.png" class="a-hiw-6_wallet"> <img src="./asset/howitworks_step_6_money.png" class="a-hiw-6_money"> </div>
-            	</div>
-               <!-- <div class="howitworks-step-info">
-                    <div class="howitworks-step-number">6</div>
-                    <div class="howitworks-step-title">You receive daily your newly mined bitcoins</div>
-                    <div class="howitworks-step-subtitle">that are available for withdrawal the same day</div>
-                </div>-->
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 custom-howitworks-step-info no-left-right-padding">
-                	<div class="custom-howitworks-step-number col-lg-2 col-md-2 col-sm-2 col-xs-2 no-left-right-padding">
-                		<div class="custom_sl_no">6</div>
-                	</div>
-                	<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 custom-howitworks-step-info-text">
-                		<div class="custom-howitworks-step-title">You receive daily your newly mined bitcoins</div>
-                		<div class="custom-howitworks-step-subtitle">that are available for withdrawal the same day</div>
-                	</div>
-                </div>
-            </div>
+	                <!--<div class="howitworks-step-info">
+	                    <div class="howitworks-step-number">1</div>
+	                    <div class="howitworks-step-title">You register on cloud hashing</div>
+	                    <div class="howitworks-step-subtitle">It takes only 2 minutes</div>
+	                </div>-->
+	                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 custom-howitworks-step-info no-left-right-padding">
+	                	<div class="custom-howitworks-step-number col-lg-2 col-md-2 col-sm-2 col-xs-2 no-left-right-padding">
+	                		<div class="custom_sl_no">1</div>
+	                	</div>
+	                	<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 custom-howitworks-step-info-text">
+	                		<div class="custom-howitworks-step-title">You register on cloud hashing</div>
+	                		<div class="custom-howitworks-step-subtitle">It takes only 2 minutes</div>
+	                	</div>
+	                </div>
+	            </div>
+	            <div class="col-md-4 col-sm-4 col-xs-12 howitworks-step howitworks-step-arrow-right no-left-right-padding">
+	            	<div class="howitworks-step-img">
+	            		<div class="animation-box a-hiw-2"> <img src="./asset/howitworks_step_2.png" alt="How it works"> <img src="./asset/howitworks_step_2_arrow.png" class="a-hiw-2_arrow" alt="How it works">
+	            			<div class="a-hiw-2_label">GH/s</div>
+	            		</div>
+	            	</div>
+	                <!--<div class="howitworks-step-info">
+	                    <div class="howitworks-step-number">2</div>
+	                    <div class="howitworks-step-title">Choose a plan</div>
+	                    <div class="howitworks-step-subtitle">More power, more bitcoins</div>
+	                </div>-->
+	                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 custom-howitworks-step-info no-left-right-padding">
+	                	<div class="custom-howitworks-step-number col-lg-2 col-md-2 col-sm-2 col-xs-2 no-left-right-padding">
+	                		<div class="custom_sl_no">2</div>
+	                	</div>
+	                	<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 custom-howitworks-step-info-text">
+	                		<div class="custom-howitworks-step-title">Choose a plan</div>
+	                		<div class="custom-howitworks-step-subtitle">More power, more bitcoins</div>
+	                	</div>
+	                </div>
+	            </div>
+	            <div class="col-md-4 col-sm-4 col-xs-12 howitworks-step howitworks-step-arrow-right no-left-right-padding">
+	            	<div class="howitworks-step-img">
+	            		<div class="animation-box a-hiw-3"> <img src="./asset/howitworks_step_3.png" class="a-hiw-3_cart"> <img src="./asset/howitworks_step_3_doc.png" class="a-hiw-3_doc">
+	            			<div class="a-hiw-2_label">GH/s</div>
+	            		</div>
+	            	</div>
+	                <!--<div class="howitworks-step-info">
+	                    <div class="howitworks-step-number">3</div>
+	                    <div class="howitworks-step-title">You pay</div>
+	                    <div class="howitworks-step-subtitle">for your new contract</div>
+	                </div>-->
+	                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 custom-howitworks-step-info no-left-right-padding">
+	                	<div class="custom-howitworks-step-number col-lg-2 col-md-2 col-sm-2 col-xs-2 no-left-right-padding">
+	                		<div class="custom_sl_no">3</div>
+	                	</div>
+	                	<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 custom-howitworks-step-info-text">
+	                		<div class="custom-howitworks-step-title">You pay</div>
+	                		<div class="custom-howitworks-step-subtitle">for your new contract</div>
+	                	</div>
+	                </div>
+	            </div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-4 col-sm-4 col-xs-12 howitworks-step howitworks-step-arrow-left no-left-right-padding">
+	            	<div class="howitworks-step-img">
+	            		<div class="animation-box a-hiw-4"> <img src="./asset/howitworks_step_4.png"> <img src="./asset/howitworks_step_4_ping.png" class="a-hiw-4_ping"> <img src="./asset/howitworks_step_4_light.png" class="a-hiw-4_light"> </div>
+	            	</div>
+	                <!--<div class="howitworks-step-info">
+	                    <div class="howitworks-step-number">4</div>
+	                    <div class="howitworks-step-title">We send your order</div>
+	                    <div class="howitworks-step-subtitle">to huge bitcoin mining data centers located in Europe</div>
+	                </div>-->
+	                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 custom-howitworks-step-info no-left-right-padding">
+	                	<div class="custom-howitworks-step-number col-lg-2 col-md-2 col-sm-2 col-xs-2 no-left-right-padding">
+	                		<div class="custom_sl_no">4</div>
+	                	</div>
+	                	<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 custom-howitworks-step-info-text">
+	                		<div class="custom-howitworks-step-title">We send your order</div>
+	                		<div class="custom-howitworks-step-subtitle">to huge bitcoin mining data centers located in Europe</div>
+	                	</div>
+	                </div>
+	            </div>
+	            <div class="col-md-4 col-sm-4 col-xs-12 howitworks-step howitworks-step-arrow-left no-left-right-padding">
+	            	<div class="howitworks-step-img">
+	            		<div class="animation-box a-hiw-5"> <img src="./asset/howitworks_step_5.png"> <img src="./asset/howitworks_step_5_coins.png" class="a-hiw-5_coins"> </div>
+	            	</div>
+	                <!--<div class="howitworks-step-info">
+	                    <div class="howitworks-step-number">5</div>
+	                    <div class="howitworks-step-title">The mining process begins</div>
+	                    <div class="howitworks-step-subtitle">on high-end equipment with 100% uptime</div>
+	                </div>-->
+	                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 custom-howitworks-step-info no-left-right-padding">
+	                	<div class="custom-howitworks-step-number col-lg-2 col-md-2 col-sm-2 col-xs-2 no-left-right-padding">
+	                		<div class="custom_sl_no">5</div>
+	                	</div>
+	                	<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 custom-howitworks-step-info-text">
+	                		<div class="custom-howitworks-step-title">The mining process begins</div>
+	                		<div class="custom-howitworks-step-subtitle">on high-end equipment with 100% uptime</div>
+	                	</div>
+	                </div>
+	            </div>
+	            <div class="col-md-4 col-sm-4 col-xs-12 howitworks-step howitworks-step-arrow-left no-left-right-padding">
+	            	<div class="howitworks-step-img">
+	            		<div class="animation-box a-hiw-6"> <img src="./asset/howitworks_step_6.png" class="a-hiw-6_wallet"> <img src="./asset/howitworks_step_6_money.png" class="a-hiw-6_money"> </div>
+	            	</div>
+	               <!-- <div class="howitworks-step-info">
+	                    <div class="howitworks-step-number">6</div>
+	                    <div class="howitworks-step-title">You receive daily your newly mined bitcoins</div>
+	                    <div class="howitworks-step-subtitle">that are available for withdrawal the same day</div>
+	                </div>-->
+	                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 custom-howitworks-step-info no-left-right-padding">
+	                	<div class="custom-howitworks-step-number col-lg-2 col-md-2 col-sm-2 col-xs-2 no-left-right-padding">
+	                		<div class="custom_sl_no">6</div>
+	                	</div>
+	                	<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 custom-howitworks-step-info-text">
+	                		<div class="custom-howitworks-step-title">You receive daily your newly mined bitcoins</div>
+	                		<div class="custom-howitworks-step-subtitle">that are available for withdrawal the same day</div>
+	                	</div>
+	                </div>
+	            </div>
+			</div>
         </div>
         <div class="col-md-12 col-xs-12 custom_center_text" id="start_now" >
         	<a href="signup.php" class="btn btn-lg btn-success top-banner-button">Start now</a>
@@ -170,111 +158,109 @@ require_once 'header.php';
 </div>
 <div class="bordered_div"></div>    
 
-<div>
-	<div class="container howitworks">
-		<div class="row text-center">
-			<h2> How it all works</h2>
-		</div>
-		<div class="row text-center" role="navigation">
-			<ul class="auction-about-tabs" role="tablist">
-				<li class="on active" role="presentation" >
-					<a href="#about-auction-buy" aria-controls="about-auction-buy" role="tab" data-toggle="tab" aria-expanded="true">You Buy</a>
-				</li>
-				<li role="presentation">
-					<a href="#about-auction-sell" aria-controls="about-auction-sell" role="tab" data-toggle="tab">You Sell</a>
-				</li>
-			</ul>
-		</div>
-		<div class="howitworks-steps auction-about-steps tab-content text-center">
-			<div role="tabpanel" class="row tab-pane fade active in" id="about-auction-buy">
-				<div class="col-md-3 howitworks-step howitworks-step-arrow-right">
-					<div class="howitworks-step-img">
-						<div class="animation-box">
-							<img src="image/price/promo_step_1.png">
-						</div>
-					</div>
-					<div class="howitworks-step-info">
-						<div class="howitworks-step-title">Register on Hashing24</div>
-						<div class="howitworks-step-subtitle">(if not yet registered)</div>
+<div class="container howitworks custom-container">
+	<div class="row text-center">
+		<h2> How it all works</h2>
+	</div>
+	<div class="row text-center" role="navigation">
+		<ul class="auction-about-tabs" role="tablist">
+			<li class="on active" role="presentation" >
+				<a href="#about-auction-buy" aria-controls="about-auction-buy" role="tab" data-toggle="tab" aria-expanded="true">You Buy</a>
+			</li>
+			<li role="presentation">
+				<a href="#about-auction-sell" aria-controls="about-auction-sell" role="tab" data-toggle="tab" aria-expanded="false">You Sell</a>
+			</li>
+		</ul>
+	</div>
+	<div class="howitworks-steps auction-about-steps tab-content text-center">
+		<div role="tabpanel" class="row tab-pane fade active in" id="about-auction-buy">
+			<div class="col-md-3 col-sm-3 howitworks-step howitworks-step-arrow-right">
+				<div class="howitworks-step-img">
+					<div class="animation-box">
+						<img src="image/price/promo_step_1.png">
 					</div>
 				</div>
-				<div class="col-md-3 howitworks-step howitworks-step-arrow-right">
-					<div class="howitworks-step-img">
-						<div class="animation-box">
-							<img src="image/price/promo_step_2.png">
-						</div>
-					</div>
-					<div class="howitworks-step-info">
-						<div class="howitworks-step-title">Put enough funds in your balance</div>
-					</div>
-				</div>
-				<div class="col-md-3 howitworks-step howitworks-step-arrow-right">
-					<div class="howitworks-step-img">
-						<div class="animation-box">
-							<img src="image/price/promo_step_3.png">
-						</div>
-					</div>
-					<div class="howitworks-step-info">
-						<div class="howitworks-step-title">Make the winning bid</div>
-					</div>
-				</div>
-				<div class="col-md-3 howitworks-step">
-					<div class="howitworks-step-img">
-						<div class="animation-box">
-							<img src="image/price/promo_step_4.png">
-						</div>
-					</div>
-					<div class="howitworks-step-info">
-						<div class="howitworks-step-title">Receive your new bitcoin mining contract</div>
-					</div>
+				<div class="howitworks-step-info">
+					<div class="howitworks-step-title">Register on Hashing24</div>
+					<div class="howitworks-step-subtitle">(if not yet registered)</div>
 				</div>
 			</div>
-			<div role="tabpanel" class="row tab-pane fade" id="about-auction-sell">
-				<div class="col-md-3 howitworks-step howitworks-step-arrow-right">
-					<div class="howitworks-step-img">
-						<div class="animation-box">
-							<img src="image/price/promo_step_4.png">
-						</div>
-					</div>
-					<div class="howitworks-step-info">
-						<div class="howitworks-step-title">Determine your lot profile</div>
-						<div class="howitworks-step-subtitle">(hashpower, auction end date, starting price)</div>
+			<div class="col-md-3 col-sm-3 howitworks-step howitworks-step-arrow-right">
+				<div class="howitworks-step-img">
+					<div class="animation-box">
+						<img src="image/price/promo_step_2.png">
 					</div>
 				</div>
-				<div class="col-md-3 howitworks-step howitworks-step-arrow-right">
-					<div class="howitworks-step-img">
-						<div class="animation-box">
-							<img src="image/price/promo_step_5.png">
-						</div>
-					</div>
-					<div class="howitworks-step-info">
-						<div class="howitworks-step-title">Place it on the Auction for sale</div>
+				<div class="howitworks-step-info">
+					<div class="howitworks-step-title">Put enough funds in your balance</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-3 howitworks-step howitworks-step-arrow-right">
+				<div class="howitworks-step-img">
+					<div class="animation-box">
+						<img src="image/price/promo_step_3.png">
 					</div>
 				</div>
-				<div class="col-md-3 howitworks-step howitworks-step-arrow-right">
-					<div class="howitworks-step-img">
-						<div class="animation-box">
-							<img src="image/price/promo_step_3.png">
-						</div>
-					</div>
-					<div class="howitworks-step-info">
-						<div class="howitworks-step-title">Take the winning bid</div>
+				<div class="howitworks-step-info">
+					<div class="howitworks-step-title">Make the winning bid</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-3 howitworks-step">
+				<div class="howitworks-step-img">
+					<div class="animation-box">
+						<img src="image/price/promo_step_4.png">
 					</div>
 				</div>
-				<div class="col-md-3 howitworks-step">
-					<div class="howitworks-step-img">
-						<div class="animation-box">
-							<img src="image/price/promo_step_6.png">
-						</div>
-					</div>
-					<div class="howitworks-step-info">
-						<div class="howitworks-step-title">Receive proceeds from your sale in your balance</div>
-					</div>
+				<div class="howitworks-step-info">
+					<div class="howitworks-step-title">Receive your new bitcoin mining contract</div>
 				</div>
 			</div>
 		</div>
-	</div>	
-</div>
+		<div role="tabpanel" class="row tab-pane fade" id="about-auction-sell">
+			<div class="col-md-3 col-sm-3 howitworks-step howitworks-step-arrow-right">
+				<div class="howitworks-step-img">
+					<div class="animation-box">
+						<img src="image/price/promo_step_4.png">
+					</div>
+				</div>
+				<div class="howitworks-step-info">
+					<div class="howitworks-step-title">Determine your lot profile</div>
+					<div class="howitworks-step-subtitle">(hashpower, auction end date, starting price)</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-3 howitworks-step howitworks-step-arrow-right">
+				<div class="howitworks-step-img">
+					<div class="animation-box">
+						<img src="image/price/promo_step_5.png">
+					</div>
+				</div>
+				<div class="howitworks-step-info">
+					<div class="howitworks-step-title">Place it on the Auction for sale</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-3 howitworks-step howitworks-step-arrow-right">
+				<div class="howitworks-step-img">
+					<div class="animation-box">
+						<img src="image/price/promo_step_3.png">
+					</div>
+				</div>
+				<div class="howitworks-step-info">
+					<div class="howitworks-step-title">Take the winning bid</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-3 howitworks-step">
+				<div class="howitworks-step-img">
+					<div class="animation-box">
+						<img src="image/price/promo_step_6.png">
+					</div>
+				</div>
+				<div class="howitworks-step-info">
+					<div class="howitworks-step-title">Receive proceeds from your sale in your balance</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	
 <!-- <div class="container custom-container calculate work">
 	<p>Calculate Profit</p>
 	<div class="col-md-2 col-sm-2 col-xs-2"></div>
@@ -372,7 +358,7 @@ $( document ).ready(function() {
 });
 </script>
 <script>
-	$('li').removeClass('active');
-	$('.work_menu').addClass('active');
+	$('.menu #nav li').removeClass('active');
+	$('.menu #nav .work_menu').addClass('active');
 </script> 
 
