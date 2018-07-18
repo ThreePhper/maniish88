@@ -93,7 +93,7 @@ require_once 'header.php';
 		</div>
         <div class="text-center">
             <div class="col-md-offset-1 col-md-10">
-                <h1 class="tall">Hashing24 was made by professionals for individuals who want to get involved in bitcoin
+                <h1 class="tall">Cloud Hashing was made by professionals for individuals who want to get involved in bitcoin
                     mining</h1>
                 <p class="default-p">We believe that everyone should benefit from the mining and be able to have access
                     the newest technologies and large scale industrial data centers from your laptop or mobile
