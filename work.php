@@ -19,7 +19,7 @@ require_once 'header.php';
 </div>
 <div class="container custom-container">
 	<!--<section class="mbr-section article mbr-after-navbar work" id="msg-box8-y" style="background-color: rgb(255, 255, 255)">-->
-	<div class="row">
+	<div class="">
 		<div class="col-lg-12 col-md-12 col-xs-12 no-left-right-padding" id="work_m_div">
 
 			<!-- <h3 class="section-title">HOW IT WORKS</h3> -->

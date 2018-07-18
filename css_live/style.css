@@ -2454,3 +2454,50 @@ h3 {
         width: 100%;
     }
 }
+
+@media (min-width:800px) and (max-width:985px) {
+    .col-tablet-1, .col-tablet-2, .col-tablet-3, .col-tablet-4, .col-tablet-5, .col-tablet-6, .col-tablet-7, .col-tablet-8, .col-tablet-9,
+    .col-tablet-10, .col-tablet-11, .col-tablet-12 {
+        position: relative;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+        float: left;
+    }
+    .col-tablet-1 {
+        width: 8.333%;
+    }
+    .col-tablet-2 {
+        width: 16.666%;
+    }
+    .col-tablet-3 {
+        width: 25%;
+    }
+    .col-tablet-4 {
+        width: 33.333%;
+    }
+    .col-tablet-5 {
+        width: 41.666%;
+    }
+    .col-tablet-6 {
+        width: 50%;
+    }
+    .col-tablet-7 {
+        width: 58.333%;
+    }
+    .col-tablet-8 {
+        width: 66.666%;
+    }
+    .col-tablet-9 {
+        width: 75%;
+    }
+    .col-tablet-10 {
+        width: 83.333%;
+    }
+    .col-tablet-11 {
+        width: 91.666%;
+    }
+    .col-tablet-12 {
+        width: 100%;
+    }
+}

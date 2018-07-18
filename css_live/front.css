@@ -4,13 +4,13 @@
     color: #274c65;
     letter-spacing: .03em;
 	font-family: 'Signika',sans-serif;
-	padding:0px 40px;
+	/*padding:0px 40px;*/
 }
 .cuspriceh3{
 	color: #274c65;
     font-weight: 600;
     font-size: 24px;
-   margin: 36px 40px 33px;
+   /*margin: 36px 40px 33px;*/
     letter-spacing: .02em;
 	font-family: 'Signika',sans-serif;
 }
@@ -21,14 +21,14 @@
     color: #1e2b35;
     font-size: 14px;
     letter-spacing: .01em;
-	margin-left: 40px;
+	/*margin-left: 40px;*/
  }
  
  .cuspriceh4{
 	color: #274c65;
     font-weight: 700;
     font-size:16px;
-   margin: 36px 40px 33px;
+   /*margin: 36px 40px 33px;*/
     letter-spacing: .02em;
 	font-family: 'Signika',sans-serif;
 }
@@ -38,7 +38,7 @@
     font-size: 14px;
     letter-spacing: .01em;
     font-family: "Open Sans","Arial",sans-serif;
-    padding-left: 40px;
+    /*padding-left: 40px;*/
     
 }
 

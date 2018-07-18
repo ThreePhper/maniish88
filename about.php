@@ -61,7 +61,7 @@ require_once 'header.php';
 <div class="container custom-container">
 	<div class="row custom_10_margin_top">
 		<div class="col-md-6 col-sm-6 col-xs-12 embed-responsive embed-responsive-16by9 abtvideo"  id="about_us_first_img">
-			<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qFOeFXwCuLw?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/nbNBwoa4Z4Y?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 		</div>
 		<div class="about col-md-6 col-sm-6 col-xs-12" id="about_us_first_div">
 			<p>Bitcoin mining is a peer-to-peer computer process used to secure and verify bitcoin transactions - payments from one user to another on a decentralized network. Mining involves adding bitcoin transaction data to bitcoin's global public ledger of past transactions. Each group of transactions is called a block. Blocks are secured by bitcoin miners and build on top of each other forming a chain. This ledger of past transactions is called the blockchain.</p>
@@ -90,6 +90,7 @@ require_once 'header.php';
 					<font class="orange_font">How It Works.</font>
 				</a>
 			</p>
+			<p>We believe that everyone should benefit from the mining and be able to have access the newest technologies and large scale industrial data centers from your laptop or mobile phone.</p>
 		</div>
 		<!-- <div class="col-md-12 col-xs-12">
 			<p class="feature">OUR FEATURES</p>
