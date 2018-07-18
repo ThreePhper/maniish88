@@ -13,7 +13,7 @@ require_once 'header.php';
 	    margin-left: 10px;
     	width: 94.5%;
 	}
-} 
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
@@ -21,10 +21,10 @@ require_once 'header.php';
 		margin-left: 10px;
 		width: 48%;
 	}
-} 
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {...} 
+@media only screen and (min-width: 768px) {...}
 
 @media (min-width:800px) and (max-width:985px) {
 	#for-985px {
@@ -34,7 +34,7 @@ require_once 'header.php';
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {...} 
+@media only screen and (min-width: 992px) {...}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {...}
@@ -46,7 +46,7 @@ require_once 'header.php';
 				<strong>
 					<a href="index.php">Home</a>&nbsp;&nbsp;
 					/&nbsp;&nbsp;
-					
+
 					<a>About us</a>
 				</strong>
 			</h5>
@@ -72,7 +72,7 @@ require_once 'header.php';
 		<div class="about col-lg-6 col-md-12 col-sm-12 col-xs-12">
 			<p>Mining is the process by which new bitcoins are created and transactions are sent across the network. Both the people who engage in it and the devices that are used for mining are called miners.
 			</p>
-			
+
 		</div>
 		<div class="about col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<p>
@@ -85,13 +85,22 @@ require_once 'header.php';
 			<p>The primary purpose of mining is to allow bitcoin nodes to reach a secure, tamper-resistant consensus. Mining is also the mechanism used to introduce bitcoins into the system. Miners are paid transaction fees as well as a subsidy of newly created coins called block rewards. This both serves the purpose of disseminating new coins in a decentralized manner as well as motivating people to provide security for the system through mining.</p>
 			<p>Cloud Hashing was made by professionals for individuals who want to get involved in bitcoin mining. We believe that everyone should benefit from the mining and be able to have access the newest technologies and large scale industrial data centers from your laptop or mobile phone.</p>
 			<p>The cloud hashing team has been involved in a mining business since 2014. We constantly explore the bitcoin market and we want to share our knowledge with you.</p>
-			<p>To learn more about our advantages, please see 
+			<p>To learn more about our advantages, please see
 				<a href="work.php" id="work_link">
 					<font class="orange_font">How It Works.</font>
 				</a>
 			</p>
-			<p>We believe that everyone should benefit from the mining and be able to have access the newest technologies and large scale industrial data centers from your laptop or mobile phone.</p>
 		</div>
+        <div class="text-center">
+            <div class="col-md-offset-1 col-md-10">
+                <h1 class="tall">Hashing24 was made by professionals for individuals who want to get involved in bitcoin
+                    mining</h1>
+                <p class="default-p">We believe that everyone should benefit from the mining and be able to have access
+                    the newest technologies and large scale industrial data centers from your laptop or mobile
+                    phone.</p>
+                <a href="signup.php" class="btn btn-warning top-banner-button margin-top-40">Join Us</a>
+            </div>
+        </div>
 		<!-- <div class="col-md-12 col-xs-12">
 			<p class="feature">OUR FEATURES</p>
 			<div class="col-md-2 col-sm-2 col-xs-2"></div>

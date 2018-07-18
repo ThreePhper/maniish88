@@ -2,6 +2,7 @@
 <?php
 require_once('header.php');
 ?>
+<link rel="stylesheet" href="css_live/style_front_1680.css" type="text/css">
 <link rel="stylesheet" href="css_live/front.css" type="text/css">
 
 <div class="navi-bar">
@@ -66,10 +67,10 @@ require_once('header.php');
 
 
 
-<div class="container" style="margin-bottom:50px;">
+<div class="container custom-container" style="margin-bottom:50px;">
     <br>
     <div class="row">
-        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 col-tablet-6">
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 col-tablet-12">
             <h2 class="cuspriceh2">Contract Information</h2>
             <br>
             <h4 class="cuspriceh3">Bitcoin Mining Cloud Services</h4>
@@ -110,7 +111,8 @@ require_once('header.php');
             </div>
         </div>
 
-        <div class="col-xs-12 col-sm-6 col-md-4 col-md-offset-1 col-tablet-6 cusreview">
+        <div class="col-tablet-2"></div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-md-offset-1 col-tablet-8 cusreview">
             <section class="cusreview-inner">
                 <span class="cusreviewh3"> Reviews</span>
                 <br>
@@ -178,163 +180,92 @@ require_once('header.php');
     </div>
 </div>
 <div class="clearfix"></div>
-<!-- <div style="background-color:#f9f9fa;padding:50px 0;">
-    <h2 style="text-align:center;">Bitcoin Mining Cost and Benefits Comparison Chart</h2>
-    <p style="text-align:center;color:#000;">A chart to compare the costs and benefits of having your own hardware to having a contract with Genesis Mining</p>
-    <br>
-    <br>
-    <div class="col-sm-12 col-md-10 col-md-offset-1">
-        <div class="table-responsive trans-usr">
-
-            <table class="table table-condensed table-hover">
-                <thead>
-                    <tr>
-                        <th class="gmp2-1" style="line-height: 90px;">Costs of a contract with Genesis Mining</th>
-                        <th class="gmp2-2" style="text-align:right;line-height: 90px;">Costs and externalities of having your own hardware</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td data-label="Costs of a contract with Genesis Mining" class="gmp2-1">
-                            <span>One-time price of purchasing the contract
-                                <i class="fa fa-check"></i>
-                            </span>
-                        </td>
-                        <td data-label="Costs and externalities of having your own hardware" class="gmp2-2">
-                            <span>Price of the hardware
-                                <i class="fa fa-times"></i>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td data-label="Costs of a contract with Genesis Mining" class="gmp2-1">
-                            <span>No extra fee
-                                <i class="fa fa-check"></i>
-                            </span>
-                        </td>
-                        <td data-label="Costs and externalities of having your own hardware" class="gmp2-2">
-                            <span>Shipping costs
-                                <i class="fa fa-times"></i>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td data-label="Costs of a contract with Genesis Mining" class="gmp2-1">
-                            <span>No extra fee
-                                <i class="fa fa-check"></i>
-                            </span>
-                        </td>
-                        <td data-label="Costs and externalities of having your own hardware" class="gmp2-2">
-                            <span>Possible customs costs
-                                <i class="fa fa-times"></i>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td data-label="Costs of a contract with Genesis Mining" class="gmp2-1">
-                            <span>Best electricity rates possible. 100% green energy
-                                <i class="fa fa-check"></i>
-                            </span>
-                        </td>
-                        <td data-label="Costs and externalities of having your own hardware" class="gmp2-2">
-                            <span>Usually high electricity rates
-                                <i class="fa fa-times"></i>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td data-label="Costs of a contract with Genesis Mining" class="gmp2-1">
-                            <span>You start mining immediately!
-                                <i class="fa fa-check"></i>
-                            </span>
-                        </td>
-                        <td data-label="Costs and externalities of having your own hardware" class="gmp2-2">
-                            <span>Waiting for delivery - you are losing days,even weeks of mining time, and your purchased hardware
-                                is already losing its value
-                                <i class="fa fa-times"></i>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td data-label="Costs of a contract with Genesis Mining" class="gmp2-1">
-                            <span>We guarantee 100% uptime and cover system downtimes by using our own miners.
-                                <i class="fa fa-check"></i>
-                            </span>
-                        </td>
-                        <td data-label="Costs and externalities of having your own hardware" class="gmp2-2">
-                            <span>Loss of mining time due to system downtimes
-                                <i class="fa fa-times"></i>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td data-label="Costs of a contract with Genesis Mining" class="gmp2-1">
-                            <span>No extra fee
-                                <i class="fa fa-check"></i>
-                            </span>
-                        </td>
-                        <td data-label="Costs and externalities of having your own hardware" class="gmp2-2">
-                            <span>Cost of additional equipment
-                                <i class="fa fa-times"></i>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td data-label="Costs of a contract with Genesis Mining" class="gmp2-1">
-                            <span>No extra fee
-                                <i class="fa fa-check"></i>
-                            </span>
-                        </td>
-                        <td data-label="Costs and externalities of having your own hardware" class="gmp2-2">
-                            <span>Electricity consumption of additional equipment
-                                <i class="fa fa-times"></i>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td data-label="Costs of a contract with Genesis Mining" class="gmp2-1">
-                            <span>No extra fee
-                                <i class="fa fa-check"></i>
-                            </span>
-                        </td>
-                        <td data-label="Costs and externalities of having your own hardware" class="gmp2-2">
-                            <span>Cost of cooling
-                                <i class="fa fa-times"></i>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td data-label="Costs of a contract with Genesis Mining" class="gmp2-1">
-                            <span>Hardware is at a remote location, you are exempt from excessive heat
-                                <i class="fa fa-check"></i>
-                            </span>
-                        </td>
-                        <td data-label="Costs and externalities of having your own hardware" class="gmp2-2">
-                            <span>Excessive heat
-                                <i class="fa fa-times"></i>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td data-label="Costs of a contract with Genesis Mining" class="gmp2-1">
-                            <span>Hardware is at a remote location, you don’t have to deal with loud noise
-                                <i class="fa fa-check"></i>
-                            </span>
-                        </td>
-                        <td data-label="Costs and externalities of having your own hardware" class="gmp2-2">
-                            <span>Loud noise
-                                <i class="fa fa-times"></i>
-                            </span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="clearfix"></div>
+<div id="gm-pricing-2">
+    <div id="gm-pricing-2-top">
+        <article class="container custom-container">
+            <section class="row">
+                <h2 class="col-sm-12">Bitcoin Mining Cost and Benefits Comparison Chart</h2>
+                <p class="col-sm-12">A chart to compare the costs and benefits of having your own hardware to having a contract with Genesis Mining</p>
+            </section>
+        </article>
     </div>
-    <div class="clearfix"></div>
+
+
+    <div id="gm-pricing-2-bottom">
+        <article class="container custom-container">
+            <section class="row">
+                <div class="col-sm-12 col-md-10 col-md-offset-1">
+                    <div class="table-responsive trans-usr">
+                        <table class="table table-condensed table-hover">
+                            <thead>
+                            <tr>
+                                <th class="gmp2-1">Costs of a contract with Genesis Mining</th>
+                                <th class="gmp2-2">Costs and externalities of having your own hardware</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td data-label="Costs of a contract with Genesis Mining" class="gmp2-1"><span>One-time price of purchasing the contract                                        <i class="fa fa-check"></i></span></td>
+                                <td data-label="Costs and externalities of having your own hardware" class="gmp2-2"><span>Price of the hardware <i class="fa fa-times"></i></span></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Costs of a contract with Genesis Mining" class="gmp2-1"><span>No extra fee <i class="fa fa-check"></i></span></td>
+                                <td data-label="Costs and externalities of having your own hardware" class="gmp2-2"><span>Shipping costs <i class="fa fa-times"></i></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Costs of a contract with Genesis Mining" class="gmp2-1"><span>No extra fee <i class="fa fa-check"></i></span></td>
+                                <td data-label="Costs and externalities of having your own hardware" class="gmp2-2"><span>Possible customs costs <i class="fa fa-times"></i></span></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Costs of a contract with Genesis Mining" class="gmp2-1">
+                                    <span>Best electricity rates possible. 100% green energy <i class="fa fa-check"></i></span></td>
+                                <td data-label="Costs and externalities of having your own hardware" class="gmp2-2"><span>Usually high electricity rates <i class="fa fa-times"></i></span></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Costs of a contract with Genesis Mining" class="gmp2-1"><span>You start mining immediately! <i class="fa fa-check"></i></span></td>
+                                <td data-label="Costs and externalities of having your own hardware" class="gmp2-2">
+                                    <span>Waiting for delivery - you are losing days,even weeks of mining time, and your purchased hardware is already losing its value                                        <i class="fa fa-times"></i></span></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Costs of a contract with Genesis Mining" class="gmp2-1">
+                                    <span>We guarantee 100% uptime and cover system downtimes by using our own miners.                                        <i class="fa fa-check"></i></span></td>
+                                <td data-label="Costs and externalities of having your own hardware" class="gmp2-2">
+                                    <span>Loss of mining time due to system downtimes <i class="fa fa-times"></i></span></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Costs of a contract with Genesis Mining" class="gmp2-1"><span>No extra fee <i class="fa fa-check"></i></span></td>
+                                <td data-label="Costs and externalities of having your own hardware" class="gmp2-2"><span>Cost of additional equipment <i class="fa fa-times"></i></span></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Costs of a contract with Genesis Mining" class="gmp2-1"><span>No extra fee <i class="fa fa-check"></i></span></td>
+                                <td data-label="Costs and externalities of having your own hardware" class="gmp2-2">
+                                    <span>Electricity consumption of additional equipment <i class="fa fa-times"></i></span></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Costs of a contract with Genesis Mining" class="gmp2-1"><span>No extra fee <i class="fa fa-check"></i></span></td>
+                                <td data-label="Costs and externalities of having your own hardware" class="gmp2-2"><span>Cost of cooling <i class="fa fa-times"></i></span></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Costs of a contract with Genesis Mining" class="gmp2-1">
+                                    <span>Hardware is at a remote location, you are exempt from excessive heat                                        <i class="fa fa-check"></i></span></td>
+                                <td data-label="Costs and externalities of having your own hardware" class="gmp2-2"><span>Excessive heat <i class="fa fa-times"></i></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Costs of a contract with Genesis Mining" class="gmp2-1">
+                                    <span>Hardware is at a remote location, you don’t have to deal with loud noise                                        <i class="fa fa-check"></i></span></td>
+                                <td data-label="Costs and externalities of having your own hardware" class="gmp2-2"><span>Loud noise <i class="fa fa-times"></i></span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </div>
 </div>
-<div class="clearfix"></div> -->
+<div class="clearfix"></div>
 <?php
     require_once('footer.php');
 ?>

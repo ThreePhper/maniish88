@@ -276,8 +276,8 @@ a:hover {
 }
 
 #logo {
-    height: 108px;
-    line-height: 108px;
+    height: 130px;
+    line-height: 130px;
     padding: 5px 0px;
 }
 
@@ -654,8 +654,9 @@ h4 {
     display: block;
 }
 
-p {
-    color: #cccccc;
+p.foottext {
+    /*color: #cccccc;*/
+    color: white;
     font-size: 16px;
 }
 
@@ -665,6 +666,14 @@ p {
     font-weight: normal;
    /* font-family: "Georgia", Arial, Tahoma, sans-serif;*/
     line-height: 30px;
+}
+
+.social-box {
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 25%;
+    margin-right: 10px;
+    font-size: 12px;
 }
 
 .follow {
@@ -1251,19 +1260,19 @@ p {
     }
 }
 
-h1 {
-    left: 0px !important;
-    width: 100% !important;
-    position: absolute !important;
-    top: 80px !important;
-    font-size: 70px !important;
-    text-align: center;
-    letter-spacing: 1px;
-    color: #908686;
-    opacity: 0;
-    margin-top: 15% !important;
-	margin-bottom: 10px !important;
-}
+/*h1 {*/
+    /*left: 0px !important;*/
+    /*width: 100% !important;*/
+    /*position: absolute !important;*/
+    /*top: 80px !important;*/
+    /*font-size: 70px !important;*/
+    /*text-align: center;*/
+    /*letter-spacing: 1px;*/
+    /*color: #908686;*/
+    /*opacity: 0;*/
+    /*margin-top: 15% !important;*/
+	/*margin-bottom: 10px !important;*/
+/*}*/
 
 .anim2 {
     animation-name: anim2;

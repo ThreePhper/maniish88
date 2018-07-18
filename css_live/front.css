@@ -41,11 +41,12 @@
     /*padding-left: 40px;*/
     
 }
+@media only screen and (min-width: 992px) {
+    .cusreview
+    {
+        margin-top: 135px;
 
-.cusreview
-{
-margin-top: 33px;	
-
+    }
 }
 .cusreview-inner{
 	padding: 75px 60px 50px;
@@ -146,12 +147,6 @@ border-bottom: none !important;
     display: block;
     position: relative;
 }
-.trans-usr tbody > tr > td.gmp2-1 i {
-    position: absolute;
-    right: 70px;
-    top: 23px;
-    color: #d6d515;
-}
 .trans-usr .gmp2-2 {
     width: 50%;
 }
@@ -223,12 +218,6 @@ right:35px
     min-height: 75px;
     display: block;
     position: relative;
-}
-.trans-usr tbody > tr > td.gmp2-1 i {
-    position: absolute;
-    right: 70px;
-    top: 23px;
-    color: #d6d515;
 }
 
 /*How it works*/
