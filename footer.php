@@ -23,7 +23,7 @@
 			<div class="col-md-3 col-sm-3 col-xs-12 mob-full-col" style="float:left; margin-bottom: 2%"">
 			<h4>FOLLOW US</h4>
 			<span class="followWrap">
-				<div class="col-xs-2 social-box">
+				<div class="col-xs-2 social-box facebook">
 					<a target="_blank" href="https://www.facebook.com" title="Facebook"><i class="fab fa-facebook-f fa-2x"></i></a>	
 				</div>
 				<div class="col-xs-2 social-box">
@@ -33,7 +33,7 @@
 					<a target="_blank" href="https://www.instagram.com" title="Instagram"><i class="fab fa-instagram fa-2x"></i></a>
 				</div>
 				<div class="col-xs-2 social-box">
-					<a target="_blank" href="https://en.wikipedia.org" title="Wikipedia"><i class="fab fa-wikipedia-w fa-2x"></i></a>
+					<a target="_blank" href="https://www.linkedin.com" title="LinkedIn"><i class="fab fa-linkedin-in fa-2x"></i></a>
 				</div>
 			</span>
 		</div>

@@ -23,48 +23,215 @@ require_once('header.php');
         </div>
     </div>
 </div>
-<div>
-    <!-- <div class="row bodyblock" style="background-color:#fff;margin-top:0;">
-		<div class="col-md-8 col-md-offset-2">
-			<div class="body">
-				THE NEW ECONOMY IS NOW. ARE YOU READY?
-			</div>
-			<p>
-				Ready for the new economy? It's here. It's now. And you can be part of it with bit-miner.
-			</p>
-			<div class="pageblock">
-				PICK THE PACKAGE THAT'S RIGHT FOR YOU
+<div class="container">
+	<div class="tariffs-wrapper j-tariffs-wrapper">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bodyblock hidden-sm hidden-xs">
+				<div class="body">
+					THE NEW ECONOMY IS NOW. ARE YOU READY?
+				</div>
+				<p>
+					Ready for the new economy? It's here. It's now. And you can be part of it with bit-miner.
+				</p>
+				<div class="pageblock">
+					PICK THE PACKAGE THAT'S RIGHT FOR YOU
+				</div>
 			</div>
 		</div>
-	</div> -->
-    <div class="price-section container-fluid">
-        <div class="row">
-        	<div class="col-tablet-3"></div>
-            <div class="col-md-6 col-md-offset-3 col-tablet-6">
-                <div class="comp-price">
-                    <div class="comp-heading">&nbsp;</div>
-                    <br>
-                    <h2 class="comp-h2">Platinum</h2>
-                    <br>
-                    <span class="comp-font">
-                        <small>$</small>150
-                        <sup>00</sup>
-                    </span>
-                    <hr>
-                    <span class="comp-font2">5 TH/s</span>
-                    <hr> 1 Year Bitcoin Mining Contract
-                    <br> SHA-256 Mining Algorithm
-                    <br> Maintenance Fees Apply
-                    <br>
-                    <br>
-                    <br>
-                    <a href="signup.php" class="btn btn-custom btn-lg">Purchase Plan</a>
-                </div>
-            </div>
-        </div>
-    </div>
+	    <div class="row">
+	        <div class="col-sm-6 col-sm-offset-3 ">
+	            <div class="panel panel-primary panel-contract">
+	                <div class="panel-heading text-center">
+	                    <span>Open-ended (lifetime) contract</span>
+	                </div>
+	                <div class="panel-body">
+	                    <form class="tariff-block tariff-custom" action="/contract/new" method="POST" contract-type="lifetime">
+	                        <input type="hidden" name="type" value="lifetime">
+	                        <input type="hidden" name="ghs" value="100" class="j-custom-tariff-input">
+                            <div class="widget-big-price-wrapper">
+                                <div class="widget-big-price-wrapper-currency j-widget-big-price-wrapper-currency">USD</div>
+                                <div class="widget-big-price-wrapper-value j-widget-big-price-wrapper-value">12.50</div>
+                            </div>
+                            <div class="clearfix tariff-block-blue-text">
+                                <div class="bc-label">
+                                    <ul class="tariff-block-currency-list">
+                                        <li>
+                                            <input type="radio" name="currency" id="custom-tariff-currency-BTC-HASH(0x8d5bc90)" value="BTC">
+                                            <label for="custom-tariff-currency-BTC-HASH(0x8d5bc90)">
+                                                BTC
+                                                <span class="j-custom-tariff-price-span" currency="BTC">0.0016896</span>
+                                                <div class="custom-tariff-currency-check"></div>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" checked="" name="currency" id="custom-tariff-currency-USD-HASH(0x8d5bc90)" value="USD">
+                                            <label for="custom-tariff-currency-USD-HASH(0x8d5bc90)">
+                                                USD
+                                                <span class="j-custom-tariff-price-span" currency="USD">12.50</span>
+                                                <div class="custom-tariff-currency-check"></div>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="currency" id="custom-tariff-currency-EUR-HASH(0x8d5bc90)" value="EUR">
+                                            <label for="custom-tariff-currency-EUR-HASH(0x8d5bc90)">
+                                                EUR
+                                                <span class="j-custom-tariff-price-span" currency="EUR">10.70</span>
+                                                <div class="custom-tariff-currency-check"></div>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="f12 text-center light_gray clearfix"><small>one-time payment</small></p>
+                            <div class="bc-input-wrapper bc-input-wrapper-blue widget-ghs-wrapper">
+                                <input name="bc-power" class="bc-input j-custom-tariff-power-new" value="100 GH/s">
+                                <div class="bc-input-steps">
+                                    <div class="bc-input-step bc-input-step-up" step="100"></div>
+                                    <div class="bc-input-step bc-input-step-down" step="-100"></div>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <div class="widget-available-hashpower">Limited Offer <b class="hidden">48796300 GH/s</b></div>
+                            </div>
+                            <div class="tariff-block-label-wapper clearfix">
+                                <div class="bc-label pull-left"><span>Maintenance</span> <span class="j-widget-label-tooltip fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="Paid automatically from daily mined BTC volume"></span></div>
+                                <div class="bc-label pull-right"><span class="red maintenance-old">$0.00033</span> $0.00017 per GH/s per day</div>
+                            </div>
+                            <div class="tariff-block-divider"></div>
+                            <div class="tariff-block-label-wapper clearfix">
+                                <div class="bc-label pull-left">Amount of hosts</div>
+                                <div class="bc-label pull-right"><span class="j-custom-tariff-hosts-amount-span">1</span></div>
+                            </div>
+                            <div class="tariff-block-divider"></div>
+                            <div class="tariff-block-label-wapper clearfix">
+                                <div class="bc-label pull-left">Delivery Date <span class="j-widget-label-tooltip fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="Delivery date – a date when the mining contract gets activated"></span></div>
+                                <div class="bc-label pull-right">Instantly</div>
+                            </div>
+                            <div class="tariff-block-divider"></div>
+                            <div class="tariff-block-label-wapper clearfix">
+                                <div class="bc-label pull-left">Contract type</div>
+                                <div class="bc-label pull-right">
+                                            Open-ended (lifetime)
+                                </div>
+                            </div>
+                            <div class="tariff-block-button-wrapper text-center">
+                                <a href="signup.php" target="_self" class="btn btn-lg btn-success">Buy</a>
+                            </div>
+	                    </form>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
 </div>
+<script>
+$(function() {
+	var minHosts = 1,
+	    convertMultiplier = 1000,
+	    ghsPerHost = 100;
 
+	var pricePerThs = {},
+	    maxHosts = {};
+	maxHosts["lifetime"] = 10000;
+	pricePerThs["lifetime"] = {};
+	pricePerThs["lifetime"]["BTC"] = 0.01703253;
+	pricePerThs["lifetime"]["USD"] = 125;
+	pricePerThs["lifetime"]["EUR"] = 107;
+	recalcCustomTariffValues(minHosts, $('form[contract-type="lifetime"]'));
+
+	function formatCurrency(total, currency) {
+		var decimalPoints = 2;
+		if (currency === 'BTC') {
+			decimalPoints = 8;
+		}
+	    if(total < 0) {
+	        total = Math.abs(total);
+	    }
+	    return parseFloat(total, 10).toFixed(decimalPoints).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString();
+	}
+	function recalcCustomTariffValues(hostsAmount, $form) {
+	    var $context = $form || $('.j-tariffs-wrapper'),
+	        contractType = $form.attr('contract-type');
+	    $context.find('.j-custom-tariff-input').val(hostsAmount * ghsPerHost);
+	    $context.find('.j-custom-tariff-hosts-amount').val(hostsAmount);
+	    $context.find('.j-custom-tariff-hosts-amount-span').text(hostsAmount);
+	    $context.find('.j-custom-tariff-power').val(hostsAmount * ghsPerHost);
+	    var currency = $context.find('.j-trade-currency').find(":selected").val();
+	    $context.find('.j-custom-tariff-price').val( formatCurrency(hostsAmount * pricePerThs[contractType][currency] * ghsPerHost / 1000, currency) );
+	    $.each(pricePerThs[contractType], function(currency, price) {
+	        var $priceElement = $context.find('.j-custom-tariff-price-span[currency="'+currency+'"]');
+	        if ($priceElement) {
+	            $priceElement.text( formatCurrency(hostsAmount * price * ghsPerHost / 1000, currency) );
+	//            $priceElement.text('--.--');
+	        }
+	    });
+	    $context.find('.j-custom-tariff-power-new').val((hostsAmount * ghsPerHost) + ' GH/s');
+
+	    // big price
+	    var curr = $context.find('[name="currency"]:checked').val();
+	    $context.find('.j-widget-big-price-wrapper-currency').text(curr);
+	    $context.find('.j-widget-big-price-wrapper-value').text( formatCurrency(hostsAmount * pricePerThs[contractType][curr] * ghsPerHost / 1000, curr) );
+	    // $context.find('.j-widget-big-price-wrapper-value-old').text( formatCurrency(hostsAmount * pricePerThs['DEFAULT'][curr] * ghsPerHost / 1000, curr) );
+
+	//    $context.find('.j-widget-big-price-wrapper-value').text('--.--');
+	//    $context.find('.j-widget-big-price-wrapper-value-old').text('--.--');
+	}
+
+	$('.j-custom-tariff-hosts-amount').on('change', function(){
+	    var value = $(this).val(),
+	        hostsAmount = extractAmount(value, $(this).closest('form'));
+
+	    recalcCustomTariffValues(hostsAmount, $(this).closest('form'));
+	});
+
+	$('.j-custom-tariff-power').on('change', function(){
+	    var value = $(this).val(),
+	        hostsAmount = extractAmount((parseInt(value) || ghsPerHost) / ghsPerHost, $(this).closest('form'));
+
+	    recalcCustomTariffValues(hostsAmount, $(this).closest('form'));
+	});
+
+	$('.j-custom-tariff-price').on('change', function(){
+	    var value = $(this).val(),
+	        k = pricePerThs[$('.j-trade-currency').find(":selected").val()] * ghsPerHost / 1000,
+	        hostsAmount = extractAmount((value || k) / k, $(this).closest('form'));
+
+	    recalcCustomTariffValues(hostsAmount, $(this).closest('form'));
+	});
+
+	$('.j-trade-currency').on('change', function(){
+	    recalcCustomTariffValues($('.j-custom-tariff-hosts-amount').val(), $(this).closest('form'));
+	});
+
+	$('.j-custom-tariff-power-new').on('change', function(){
+	    var value = $(this).val(),
+	        hostsAmount = extractAmount((parseInt(value) || ghsPerHost) / ghsPerHost, $(this).closest('form'));
+
+	    recalcCustomTariffValues(hostsAmount, $(this).closest('form'));
+	});
+
+	function extractAmount(value, $form) {
+	    var contractType = $form.attr('contract-type');
+	    return Math.max(minHosts, Math.min(maxHosts[contractType], (parseInt(value) || 1)))
+	}
+
+	$('.bc-input-step').on('click', function(){
+	    var step = parseInt($(this).attr('step')) || 0,
+	        $input = $(this).closest('.bc-input-wrapper').find('.bc-input');
+
+	    $input.val(parseFloat($input.val()) + step).change();
+	});
+
+	$('.tariffs-wrapper [name="currency"]').on('change', function() {
+	    $(this).closest('form').find('.j-custom-tariff-power-new').change();
+	});
+
+	// $('.j-widget-label-tooltip[data-toggle="tooltip"]').tooltip();
+
+	$('.j-new-price-open').on('click', function() { $('.j-new-price-wrapper').addClass('opened'); return false; });
+	$('.j-new-price-close').on('click', function() { $('.j-new-price-wrapper').removeClass('opened'); return false; });
+});
+</script>
 
 
 <div class="container custom-container" style="margin-bottom:50px;">
@@ -184,8 +351,10 @@ require_once('header.php');
     <div id="gm-pricing-2-top">
         <article class="container custom-container">
             <section class="row">
-                <h2 class="col-sm-12">Bitcoin Mining Cost and Benefits Comparison Chart</h2>
-                <p class="col-sm-12">A chart to compare the costs and benefits of having your own hardware to having a contract with Genesis Mining</p>
+            	<div class="col-md-12">
+            		<h2>Bitcoin Mining Cost and Benefits Comparison Chart</h2>
+                	<p>A chart to compare the costs and benefits of having your own hardware to having a contract with Genesis Mining</p>
+            	</div>
             </section>
         </article>
     </div>

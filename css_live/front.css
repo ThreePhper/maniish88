@@ -137,10 +137,6 @@ border-bottom: none !important;
         border-right-style: none;
         border-right-width: medium;
 }
-.trans-usr tbody > tr > td.gmp2-1 span {
-    padding-right: 115px;
-    text-align: left;
-}
 .trans-usr tbody > tr > td span {
     padding-top: 20px;
     min-height: 75px;
@@ -191,13 +187,15 @@ border-bottom: none !important;
     letter-spacing: .01em;
 }
 .trans-usr tbody>tr:hover>td.gmp2-1 span{
-text-align:right;font-weight:600
+text-align:right;
+/*font-weight:600*/
 } 
 .trans-usr tbody>tr:hover>td.gmp2-1 i{
 right:35px
 }
  .trans-usr tbody>tr:hover>td.gmp2-2 span{
- text-align:left;font-weight:600
+ text-align:left;
+ /*font-weight:600*/
  } 
  .trans-usr tbody>tr:hover>td.gmp2-2 i{
  left:35px

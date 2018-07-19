@@ -20,15 +20,15 @@ html {
 /* for sticky footer */
 /*body#gm-contact{margin-bottom:60px;}*/
 /* for sticky footer */
-body {
+/*body {
     font-family: "Open Sans", "Arial", sans-serif;
     font-size: 14px;
     line-height: 1.42857143;
     color: #333;
-    background-color: #fff; }
+    background-color: #fff; }*/
 
-a:hover, a:active, a:focus {
-    color: #197089; }
+/*a:hover, a:active, a:focus {
+    color: #197089; }*/
 
 /**/
 a.bfh-selectbox-toggle:focus, input, textarea, select {
@@ -115,9 +115,9 @@ a.bfh-selectbox-toggle:focus, input:focus, textarea:focus, select:focus {
     text-transform: uppercase;
     line-height: 44px !important;
     padding: 0 25px !important;
-    -webkit-border-radius: 2px;
+    /*-webkit-border-radius: 2px;
     -moz-border-radius: 2px;
-    border-radius: 2px;
+    border-radius: 2px;*/
     font-family: "Signika", sans-serif !important;
     /*-webkit-transition: all 250ms ease-in-out!important;
   -moz-transition: all 250ms ease-in-out!important;
@@ -270,10 +270,10 @@ a.bfh-selectbox-toggle:focus, input:focus, textarea:focus, select:focus {
     display: none !important; }
 
 .btn-success {
-    background: transparent;
+    /*background: transparent;*/
     color: #fff; }
 
-.btn-success:hover {
+/*.btn-success:hover {
     background: #f6c263;
     background: -moz-linear-gradient(top, #f6c263 0%, #f5b949 100%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, #f6c263), color-stop(100%, #f5b949));
@@ -285,7 +285,7 @@ a.bfh-selectbox-toggle:focus, input:focus, textarea:focus, select:focus {
     -webkit-box-shadow: 0px 3px 4.7px 0.3px rgba(0, 0, 0, 0.24), 0px 1px 6.86px 0.14px rgba(0, 0, 0, 0.16) !important;
     -moz-box-shadow: 0px 3px 4.7px 0.3px rgba(0, 0, 0, 0.24), 0px 1px 6.86px 0.14px rgba(0, 0, 0, 0.16) !important;
     box-shadow: 0px 3px 4.7px 0.3px rgba(0, 0, 0, 0.24), 0px 1px 6.86px 0.14px rgba(0, 0, 0, 0.16) !important;
-    color: #fff; }
+    color: #fff; }*/
 
 .btn-success:focus,
 .btn-success:active {
@@ -2903,11 +2903,11 @@ progress::-webkit-progress-bar {
 
 /* Pricing table */
 #gm-pricing-2 {
-    padding: 0 0 200px 0; }
+    padding: 0 0 100px 0; }
 
 #gm-pricing-2-top {
     background: #f9f9fa;
-    padding-top: 120px; }
+    padding-top: 60px; }
 
 #gm-pricing-2-bottom {
     position: relative;
@@ -2937,7 +2937,7 @@ progress::-webkit-progress-bar {
     color: #1e2b35;
     letter-spacing: 0.01em;
     text-align: center;
-    margin-bottom: 120px; }
+    margin-bottom: 60px; }
 
 /**/
 #gm-pricing-2 .trans-usr {
@@ -3653,7 +3653,7 @@ progress::-webkit-progress-bar {
 
     #gm-pricing-2 .trans-usr td span {
         display: block;
-        /*min-height:50px;*/
+        min-height:50px;
         padding: 15px 0 15px 30px;
         position: relative;
         text-align: right; }

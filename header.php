@@ -17,7 +17,6 @@
 	
 	<script src="js_live/jquery3.3.1.min.js"></script>
 	<script type="text/javascript" src="js_live/bootstrap.min.js"></script>
- 
 
 	<script src="js_live/index.js" type="text/javascript" rel="javascript"></script>
          <script  src="js_live/jquery.min.js" type="text/javascript" ></script>
