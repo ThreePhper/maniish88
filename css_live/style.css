@@ -2517,3 +2517,6 @@ h3 {
         width: 100%;
     }
 }
+.form-control {
+    color: black;
+}

@@ -1,8 +1,8 @@
-<?php 
+<?php
+echo '<meta name="viewport" content="width=device-width, initial-scale=1">';
 	if(basename($_SERVER['PHP_SELF'])=='about.php')
 	{
 		echo '<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>About Bitcoin Mining | Cloud Hashing</title>
 		<meta name="author" content="Cloud Hashing">
 		<meta name="description" content="Founded in 2014, we have quickly grown into one of the premier cryptocurrency companies. Learn 
@@ -22,7 +22,6 @@
 	else if(basename($_SERVER['PHP_SELF'])=='contact.php')
 	{
 		echo '<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Contact Us | Cloud Hashing</title> 
 		<meta name="author" content="Cloud Hashing">
 		<meta name="description" content="Have a question? We\'re here for you!"/>
@@ -38,7 +37,6 @@
 	else if(basename($_SERVER['PHP_SELF'])=='faq.php')
 	{
 		echo '<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Frequently Asked Questions (FAQ)| Cloud Hashing</title> 
 		<meta name="author" content="Cloud Hashing">
 		<meta name="description" content="Mining with the latest algorithms allows to make as much bitcoin as possible. We aim to provide you with the easiest possible way to make money without having to do any of the hard stuff"/>
@@ -54,7 +52,6 @@
 	else if(basename($_SERVER['PHP_SELF'])=='work.php')
 	{
 		echo '<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>How Does Cloud Hashing Work | Cloud Hashing </title> 
 		<meta name="author" content="Cloud Hashing">
 		<meta name="description" content="Register with us today to get your daily newly mined bitcoins that are available after withdrawal on the same day. Get started today”/>
@@ -71,7 +68,6 @@
 	else if(basename($_SERVER['PHP_SELF'])=='index.php')
 	{
 		echo '<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Largest Cloud Bitcoin Mining Company | Cloud Hashing</title> 
 		<meta name="author" content="Cloud Hashing">
 		<meta name="description" content="Mining with the latest algorithms allows to make as much bitcoin as possible. We aim to provide you with the easiest possible way to make money without having to do any of the hard stuff">  
@@ -88,7 +84,6 @@
 	else if(basename($_SERVER['PHP_SELF'])=='price.php')
 	{
 		echo '<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Pricing | Cloud Hashing</title> 
 		<meta name="author" content="Cloud Hashing">
 		<meta name="description" content="Check out our pricing plans today!">
@@ -104,7 +99,6 @@
 	else if(basename($_SERVER['PHP_SELF'])=='offer.php')
 	{
 		echo '<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Our Offer | Cloud Hashing</title> 
 		<meta name="author" content="Cloud Hashing">
 		<meta name="description" content="We offer smart and strategic ways for you to purchase hashpower through our multi-algorithm mining system. Learn about our bitcoin mining rentals here!">

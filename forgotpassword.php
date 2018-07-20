@@ -1,66 +1,65 @@
 <?php
-	require_once 'header.php';
+require_once 'header.php';
 ?>
-<style>
-#login_header,label,#log-btn,input{
-font-family: 'Arsenal', sans-serif !important;
-}
+    <style>
+        #login_header, label, #log-btn, input {
+            font-family: 'Arsenal', sans-serif !important;
+        }
 
-</style>
+    </style>
 <?php
-include_once ("z_db.php");
+include_once("db/connection_mysqli.php");
+
+$msg = "";
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['femail'])) {
+    $email = mysqli_real_escape_string($con, $_POST['femail']);
+    $status = 1;
+    if ($status == 1) {
+
+        $status = "OK";
+        //checking constraints
+        if (strlen($email) < 1) {
+            $msg = $msg . "Please enter your Account ID.<BR>";
+            $status = "NOTOK";
+        }
+
+        if (strlen($email) != 7) {
+            $msg = $msg . "Account ID is not valid .<BR>";
+            $status = "NOTOK";
+        }
 
 
-if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['femail']))
-{
- $email=mysqli_real_escape_string($con,$_POST['femail']);
-$status=1;
-if($status==1){
+        $result = mysqli_query($con, "SELECT count(*) FROM  affiliateuser where `user_id` = '$email'");
+        $row = mysqli_fetch_row($result);
+        $numrows = $row[0];
 
-$status = "OK";
-$msg="";
-//checking constraints
-if ( strlen($email) < 1 ){
-$msg=$msg."Please enter your username.<BR>";
-$status= "NOTOK";}
+        if (($numrows) == 0) {
+            $msg = $msg . "Your account not found or your account is inactive. Please contact your administrator.<BR>";
+            $status = "NOTOK";
+        }
 
-if (preg_match("/^[_\.0-9a-zA-Z-]+@([0-9a-zA-Z][0-9a-zA-Z-]+\.)+[a-zA-Z]{2,6}$/i", $email)){
-$msg=$msg."Username is not valid .<BR>";
-$status= "NOTOK";
-}
+        $sqlquery = "SELECT wlink FROM settings where sno=0"; //fetching website from databse
+        $rec2 = mysqli_query($con, $sqlquery);
+        $row2 = mysqli_fetch_row($rec2);
+        $wlink = $row2[0]; //assigning website address
+    }
 
+    $get_pass = mysqli_query($con, "SELECT * FROM affiliateuser WHERE `user_id` = '" . $email . "'");
+    $get_pass = mysqli_fetch_assoc($get_pass);
+    $pass = $get_pass['password'];
+    $userId = $get_pass['user_id'];
+    $fname = $get_pass['fname'];
+    $lname = $get_pass['lname'];
+    echo $gmail = $get_pass['email'];
 
-$result = mysqli_query($con,"SELECT count(*) FROM  affiliateuser where username = '$email'");
-$row = mysqli_fetch_row($result);
-$numrows = $row[0];
+    if ($status == "OK") {
 
-if(($numrows) == 0) {
-$msg=$msg."Your account not found or your account is inactive. Please contact your administrator.<BR>";
-$status= "NOTOK";}
-
-$sqlquery="SELECT wlink FROM settings where sno=0"; //fetching website from databse
-$rec2=mysqli_query($con,$sqlquery);
-$row2 = mysqli_fetch_row($rec2);
-$wlink=$row2[0]; //assigning website address
-}
-
-$get_pass = mysqli_query($con, "SELECT * FROM affiliateuser WHERE username = '".$email."'");
-$get_pass = mysqli_fetch_assoc($get_pass);
-$pass = $get_pass['password'];
-$username = $get_pass['username'];
-$fname = $get_pass['fname'];
-$lname = $get_pass['lname'];
-echo $gmail = $get_pass['email'];
-
-if($status=="OK")
-{
-
-$to=$gmail;
-$headers = "MIME-Version: 1.0" . "\r\n";
-$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-$headers .= 'From: <no-reply@bit-miner.io>' . "\r\n";
-$subject="Password Request";
-$message.= '<style type="text/css">
+        $to = $gmail;
+        $headers = "MIME-Version: 1.0" . "\r\n";
+        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+        $headers .= 'From: <no-reply@bit-miner.io>' . "\r\n";
+        $subject = "Password Request";
+        $message .= '<style type="text/css">
       body {
        padding-top: 0 !important;
        padding-bottom: 0 !important;
@@ -248,7 +247,7 @@ td[class="spechide"]
                             <td align="left">
                               <div class="contentEditableContainer contentTextEditable">
                                 <div class="contentEditable" align="left">
-                                  <p>Dear <span style="font-weight:600">'.$fname.' '. $lname.',</span></p>
+                                  <p>Dear <span style="font-weight:600">' . $fname . ' ' . $lname . ',</span></p>
                                 </div>
                               </div>
                             </td>
@@ -261,9 +260,9 @@ td[class="spechide"]
                                     We have processed your request for password retrieval. Your account details are mentioned below: 
                   </p>
                   <p  style="color:#222222;font-weight:bold;">
-                                   Username: '.$username.'
+                                   Account ID: ' . $userId . '
                                     <br>
-                                   Your Password: '.$pass.'
+                                   Your Password: ' . $pass . '
                   <br>
                   </p>
                   <a href="https://bit-miner.io/login.php">Login</a>
@@ -393,79 +392,76 @@ td[class="spechide"]
     </tr>
   </tbody>
 </table>';
-mail($to,$subject,$message,$headers);
+        mail($to, $subject, $message, $headers);
 
-$errormsg = "<div class='alert alert-success'>
+        $errormsg = "<div class='alert alert-success'>
                     <button type='button' class='close' data-dismiss='alert'>&times;</button>Your password has been sent to your registered mail id. Please check your junk or spam folder if you do not find in your inbox.</div>";
-}
-else
-{
- $errormsg= "
+    } else {
+        $errormsg = "
 <div class='alert alert-danger'>
                     <button type='button' class='close' data-dismiss='alert'>&times;</button>
-                    <i class='fa fa-ban-circle'></i><strong>Username is not valid.</div>";
-}
+                    <i class='fa fa-ban-circle'></i><strong>Account ID is not valid.</div>";
+    }
 //updating status if validation passes
 
-}
-else{
-$errormsg= "
+} else {
+    $errormsg = "
 <div class='alert alert-danger'>
                     <button type='button' class='close' data-dismiss='alert'>&times;</button>
                     <i class='fa fa-ban-circle'></i><strong>$msg</div>"; //priting error if found in validation
-                  }
+}
 ?>
-<div class="container-fluid no-left-right-padding"  id="login_backgroud">
-	<div class="login-page" style="">
-		<div class="login ">
-			<div class="form-forget-passord well"  style="">
-			<p style="" id="login_header">Forget Password</p>
-				<?php 
-                if($_SERVER['REQUEST_METHOD'] == 'POST' && ($status!==""))
-                {
-                print $errormsg;
-                }
-              ?>
-				<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"], ENT_QUOTES, "utf-8"); ?>" method="post">
-						<div class="form-group forget-pass-div">
-							<label>Username*</label>
-							<div class="input-group">
-								<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-								<input type="text"  class="form-control input-box" placeholder="" name="femail" required>
-							</div>
-						</div>
-						<!--<div class="form-group">
-							<input type="password" class="form-control input-box" name="password" placeholder="* Password" required>
-						</div>
-						<div class="checkbox i-checks">
-							<input type="checkbox" name="remember">Keep me signed in
-							
-						</div>-->	
-						<div class="login-btn-div">
-							<button type="submit" class="btn btn-success btn-s-xs" style="" id="log-btn">Submit</button>
-						</div>
-						
-						<!--<div class="col-xs-12">
-							<p class="text-muted text-center">
-								<small>Dont have an account? 
-									<a href="signup.php" id="sign_up_text">Signup</a>
-								</small>
-							</p>
-							<p class="text-muted text-center">
-								<small>Forgot Password?
-									<a href="forgotpassword.php" id="forget_pass_text">Click Here</a>
-								</small>
-							</p>
-						</div>-->
-					</form>
-					
-			
-			</div>
-			
-		</div>
-	</div>
-</div>
+    <div class="container-fluid no-left-right-padding" id="login_backgroud">
+        <div class="login-page" style="">
+            <div class="login ">
+                <div class="form-forget-passord well" style="">
+                    <p style="" id="login_header">Forget Password</p>
+                    <?php
+                    if ($_SERVER['REQUEST_METHOD'] == 'POST' && ($status !== "")) {
+                        print $errormsg;
+                    }
+                    ?>
+                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"], ENT_QUOTES, "utf-8"); ?>"
+                          method="post">
+                        <div class="form-group forget-pass-div">
+                            <label>Account ID*</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                <input type="text" class="form-control input-box" placeholder="" name="femail" required>
+                            </div>
+                        </div>
+                        <!--<div class="form-group">
+                            <input type="password" class="form-control input-box" name="password" placeholder="* Password" required>
+                        </div>
+                        <div class="checkbox i-checks">
+                            <input type="checkbox" name="remember">Keep me signed in
+
+                        </div>-->
+                        <div class="login-btn-div">
+                            <button type="submit" class="btn btn-success btn-s-xs" style="" id="log-btn">Submit</button>
+                        </div>
+
+                        <!--<div class="col-xs-12">
+                            <p class="text-muted text-center">
+                                <small>Dont have an account?
+                                    <a href="signup.php" id="sign_up_text">Signup</a>
+                                </small>
+                            </p>
+                            <p class="text-muted text-center">
+                                <small>Forgot Password?
+                                    <a href="forgotpassword.php" id="forget_pass_text">Click Here</a>
+                                </small>
+                            </p>
+                        </div>-->
+                    </form>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 <?php
-	require_once 'footer.php';
+require_once 'footer.php';
 ?>
