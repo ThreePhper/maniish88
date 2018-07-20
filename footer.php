@@ -252,8 +252,6 @@
 	</div>
 </div>
 
-<script  src="asset/js/jquery-3.3.1.min.js" type="text/javascript" ></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
 <div id="google_translate_element" style="display: none">
 </div>
 <script type="text/javascript">
@@ -263,7 +261,7 @@
 </script>
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
 type="text/javascript"></script>
-<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<!--<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>-->
 <script>
 	function translateLanguage(lang) {
 
