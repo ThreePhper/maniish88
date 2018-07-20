@@ -1,4 +1,3 @@
-
 <?php
 require_once('header.php');
 ?>
@@ -31,7 +30,7 @@ require_once('header.php');
 					THE NEW ECONOMY IS NOW. ARE YOU READY?
 				</div>
 				<p>
-					Ready for the new economy? It's here. It's now. And you can be part of it with bit-miner.
+					Ready for the new economy? It's here. It's now. And you can be part of it with cloud hashing.
 				</p>
 				<div class="pageblock">
 					PICK THE PACKAGE THAT'S RIGHT FOR YOU
@@ -42,7 +41,7 @@ require_once('header.php');
 	        <div class="col-sm-6 col-sm-offset-3 ">
 	            <div class="panel panel-primary panel-contract">
 	                <div class="panel-heading text-center">
-	                    <span>Open-ended (lifetime) contract</span>
+	                    <span>1 years (12 Months) contract</span>
 	                </div>
 	                <div class="panel-body">
 	                    <form class="tariff-block tariff-custom" action="/contract/new" method="POST" contract-type="lifetime">
@@ -104,14 +103,14 @@ require_once('header.php');
                             </div>
                             <div class="tariff-block-divider"></div>
                             <div class="tariff-block-label-wapper clearfix">
-                                <div class="bc-label pull-left">Delivery Date <span class="j-widget-label-tooltip fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="Delivery date – a date when the mining contract gets activated"></span></div>
+                                <div class="bc-label pull-left">Delivery date <span class="j-widget-label-tooltip fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="Delivery date – a date when the mining contract gets activated"></span></div>
                                 <div class="bc-label pull-right">Instantly</div>
                             </div>
                             <div class="tariff-block-divider"></div>
                             <div class="tariff-block-label-wapper clearfix">
                                 <div class="bc-label pull-left">Contract type</div>
                                 <div class="bc-label pull-right">
-                                            Open-ended (lifetime)
+                                            1 years (12 Months) 
                                 </div>
                             </div>
                             <div class="tariff-block-button-wrapper text-center">
@@ -252,7 +251,7 @@ $(function() {
                 <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
                     <h4 style="margin-top:1px;" class="cuspriceh4">Contract Term</h4>
                     <p class="cusparadetail"> 1 years (12 Months) of continuous mining</p>
-                    <p class="cusparadetail"> Your mining services will run for 2 years, period - even in cases where your daily mining output falls
+                    <p class="cusparadetail"> Your mining services will run for 1 year, period - even in cases where your daily mining output falls
                         below the maintenance fees. This way, you will always have the potential to produce cryptocurrencies
                         as market conditions improve.</p>
                     <p class="cusparadetail"> The daily mining outputs are variable and are determined by three factors: the mining difficulty, the
@@ -306,7 +305,7 @@ $(function() {
                                 <br>
                                 <p>Clemente G.
                                     <br>
-                                    <small>published on 24th June, 2018</small>
+                                    <small>published on 24th July, 2018</small>
                                 </p>
                             </div>
                         </div>
@@ -319,9 +318,9 @@ $(function() {
                                 <span class="glyphicon glyphicon-star"></span>
                                 <span class="glyphicon glyphicon-star"></span>
                                 <br>
-                                <p>Clemente G.
+                                <p>Brad Mugford
                                     <br>
-                                    <small>published on 24th June, 2018</small>
+                                    <small>published on 24th July, 2018</small>
                                 </p>
                             </div>
                         </div>
@@ -334,9 +333,9 @@ $(function() {
                                 <span class="glyphicon glyphicon-star"></span>
                                 <span class="glyphicon glyphicon-star"></span>
                                 <br>
-                                <p>Clemente G.
+                                <p>Marc Gaines
                                     <br>
-                                    <small>published on 24th June, 2018</small>
+                                    <small>published on 24th July, 2018</small>
                                 </p>
                             </div>
                         </div>
@@ -353,7 +352,7 @@ $(function() {
             <section class="row">
             	<div class="col-md-12">
             		<h2>Bitcoin Mining Cost and Benefits Comparison Chart</h2>
-                	<p>A chart to compare the costs and benefits of having your own hardware to having a contract with Genesis Mining</p>
+                	<p>A chart to compare the costs and benefits of having your own hardware to having a contract with Cloud Hashing</p>
             	</div>
             </section>
         </article>
@@ -368,61 +367,61 @@ $(function() {
                         <table class="table table-condensed table-hover">
                             <thead>
                             <tr>
-                                <th class="gmp2-1">Costs of a contract with Genesis Mining</th>
+                                <th class="gmp2-1">Costs of a contract with Cloud Hashing</th>
                                 <th class="gmp2-2">Costs and externalities of having your own hardware</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
-                                <td data-label="Costs of a contract with Genesis Mining" class="gmp2-1"><span>One-time price of purchasing the contract                                        <i class="fa fa-check"></i></span></td>
+                                <td data-label="Costs of a contract with Cloud Hashing" class="gmp2-1"><span>One-time price of purchasing the contract                                        <i class="fa fa-check"></i></span></td>
                                 <td data-label="Costs and externalities of having your own hardware" class="gmp2-2"><span>Price of the hardware <i class="fa fa-times"></i></span></td>
                             </tr>
                             <tr>
-                                <td data-label="Costs of a contract with Genesis Mining" class="gmp2-1"><span>No extra fee <i class="fa fa-check"></i></span></td>
+                                <td data-label="Costs of a contract with Cloud Hashing" class="gmp2-1"><span>No extra fee <i class="fa fa-check"></i></span></td>
                                 <td data-label="Costs and externalities of having your own hardware" class="gmp2-2"><span>Shipping costs <i class="fa fa-times"></i></span>
                                 </td>
                             </tr>
                             <tr>
-                                <td data-label="Costs of a contract with Genesis Mining" class="gmp2-1"><span>No extra fee <i class="fa fa-check"></i></span></td>
+                                <td data-label="Costs of a contract with Cloud Hashing" class="gmp2-1"><span>No extra fee <i class="fa fa-check"></i></span></td>
                                 <td data-label="Costs and externalities of having your own hardware" class="gmp2-2"><span>Possible customs costs <i class="fa fa-times"></i></span></td>
                             </tr>
                             <tr>
-                                <td data-label="Costs of a contract with Genesis Mining" class="gmp2-1">
+                                <td data-label="Costs of a contract with Cloud Hashing" class="gmp2-1">
                                     <span>Best electricity rates possible. 100% green energy <i class="fa fa-check"></i></span></td>
                                 <td data-label="Costs and externalities of having your own hardware" class="gmp2-2"><span>Usually high electricity rates <i class="fa fa-times"></i></span></td>
                             </tr>
                             <tr>
-                                <td data-label="Costs of a contract with Genesis Mining" class="gmp2-1"><span>You start mining immediately! <i class="fa fa-check"></i></span></td>
+                                <td data-label="Costs of a contract with Cloud Hashing" class="gmp2-1"><span>You start mining immediately! <i class="fa fa-check"></i></span></td>
                                 <td data-label="Costs and externalities of having your own hardware" class="gmp2-2">
                                     <span>Waiting for delivery - you are losing days,even weeks of mining time, and your purchased hardware is already losing its value                                        <i class="fa fa-times"></i></span></td>
                             </tr>
                             <tr>
-                                <td data-label="Costs of a contract with Genesis Mining" class="gmp2-1">
+                                <td data-label="Costs of a contract with Cloud Hashing" class="gmp2-1">
                                     <span>We guarantee 100% uptime and cover system downtimes by using our own miners.                                        <i class="fa fa-check"></i></span></td>
                                 <td data-label="Costs and externalities of having your own hardware" class="gmp2-2">
                                     <span>Loss of mining time due to system downtimes <i class="fa fa-times"></i></span></td>
                             </tr>
                             <tr>
-                                <td data-label="Costs of a contract with Genesis Mining" class="gmp2-1"><span>No extra fee <i class="fa fa-check"></i></span></td>
+                                <td data-label="Costs of a contract with Cloud Hashing" class="gmp2-1"><span>No extra fee <i class="fa fa-check"></i></span></td>
                                 <td data-label="Costs and externalities of having your own hardware" class="gmp2-2"><span>Cost of additional equipment <i class="fa fa-times"></i></span></td>
                             </tr>
                             <tr>
-                                <td data-label="Costs of a contract with Genesis Mining" class="gmp2-1"><span>No extra fee <i class="fa fa-check"></i></span></td>
+                                <td data-label="Costs of a contract with Cloud Hashing" class="gmp2-1"><span>No extra fee <i class="fa fa-check"></i></span></td>
                                 <td data-label="Costs and externalities of having your own hardware" class="gmp2-2">
                                     <span>Electricity consumption of additional equipment <i class="fa fa-times"></i></span></td>
                             </tr>
                             <tr>
-                                <td data-label="Costs of a contract with Genesis Mining" class="gmp2-1"><span>No extra fee <i class="fa fa-check"></i></span></td>
+                                <td data-label="Costs of a contract with Cloud Hashing" class="gmp2-1"><span>No extra fee <i class="fa fa-check"></i></span></td>
                                 <td data-label="Costs and externalities of having your own hardware" class="gmp2-2"><span>Cost of cooling <i class="fa fa-times"></i></span></td>
                             </tr>
                             <tr>
-                                <td data-label="Costs of a contract with Genesis Mining" class="gmp2-1">
+                                <td data-label="Costs of a contract with Cloud Hashing" class="gmp2-1">
                                     <span>Hardware is at a remote location, you are exempt from excessive heat                                        <i class="fa fa-check"></i></span></td>
                                 <td data-label="Costs and externalities of having your own hardware" class="gmp2-2"><span>Excessive heat <i class="fa fa-times"></i></span>
                                 </td>
                             </tr>
                             <tr>
-                                <td data-label="Costs of a contract with Genesis Mining" class="gmp2-1">
+                                <td data-label="Costs of a contract with Cloud Hashing" class="gmp2-1">
                                     <span>Hardware is at a remote location, you don’t have to deal with loud noise                                        <i class="fa fa-check"></i></span></td>
                                 <td data-label="Costs and externalities of having your own hardware" class="gmp2-2"><span>Loud noise <i class="fa fa-times"></i></span></td>
                             </tr>
