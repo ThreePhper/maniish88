@@ -252,7 +252,7 @@
 	</div>
 </div>
 
-<div id="google_translate_element" style="display: none">
+<div id="google_translate_element"">
 </div>
 <script type="text/javascript">
 	function googleTranslateElementInit() {

@@ -24,7 +24,7 @@ require_once('header.php');
         <div class="gray-wrapper default-wrapper">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-12 text-center">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-tablet-12 text-center">
                         <h2>Three Easy Steps to Start Bitcoin Mining</h2>
                     </div>
                 </div>

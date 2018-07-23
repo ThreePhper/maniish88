@@ -404,7 +404,7 @@ td[class="spechide"]
 }
 ?>
     <div class="container-fluid no-left-right-padding" id="login_backgroud">
-        <div class="login-page" style="">
+        <div class="login-page signup-page" style="">
             <div class="login ">
                 <div class="form-forget-passord well" style="">
                     <p style="" id="login_header">Forget Password</p>
@@ -416,7 +416,7 @@ td[class="spechide"]
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"], ENT_QUOTES, "utf-8"); ?>"
                           method="post">
                         <div class="form-group forget-pass-div">
-                            <label>Account ID*</label>
+                            <label>Email ID*</label>
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
                                 <input type="text" class="form-control input-box" placeholder="" name="femail" required>

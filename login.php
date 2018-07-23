@@ -103,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['user_id'])) {
 ?>
 <?php require_once 'header.php'; ?>
     <div class="container-fluid no-left-right-padding" id="login_backgroud">
-        <div class="login-page" style="">
+        <div class="login-page signup-page" style="">
             <div class="login">
                 <div class="form well" style="">
                     <p style="" id="login_header">Login</p>
