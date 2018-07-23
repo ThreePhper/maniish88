@@ -5,11 +5,6 @@ if (!isset($_SESSION)) {
 require('header.php');
 include_once("db/connection_mysqli.php");
 ?>
-<style>
-    #reg-form label, #signup_header, #reg-form input, #reg-form small, #signup_btn, #reg-form select, #results, #result {
-        font-family: 'Arsenal', sans-serif !important;
-    }
-</style>
 <link rel="stylesheet" href="css_live/intlTelInput.min.css" type="text/css">
 <?php
 //session_start();
@@ -35,14 +30,13 @@ if ($result = mysqli_query($con, $sql)) {
 $sql = "SELECT * FROM  `country`";
 if ($result = mysqli_query($con, $sql)) {
     /* fetch associative array */
-    while($row = $result->fetch_assoc())
-    {
+    while ($row = $result->fetch_assoc()) {
         $countries[] = $row;
     }
 
     $countriesHtml = '<option value="">--Select Country--</option>';
     foreach ($countries as $country) {
-        $countriesHtml .= '<option value="' . $country['country_name'] . '">' . $country['country_name'] . '</option>';
+        $countriesHtml .= '<option country-id="' . $country['id'] . '" value="' . $country['name'] . '">' . $country['name'] . '</option>';
     }
 }
 
@@ -68,7 +62,7 @@ function generateUserId($con)
 
 $_SERVER['REQUEST_METHOD'] == 'GET';
 
-$aff = isset($_GET['aff']) ? $_GET['aff'] : null ;
+$aff = isset($_GET['aff']) ? $_GET['aff'] : null;
 $affs = isset($_GET['aff']) ? $_GET['aff'] : null;
 
 
@@ -87,9 +81,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['email']) && isset($_PO
     $address = isset($_POST['address']) ? mysqli_real_escape_string($con, $_POST['address']) : '';
     $city = isset($_POST['city']) ? mysqli_real_escape_string($con, $_POST['city']) : '';
     $state = isset($_POST['state']) ? mysqli_real_escape_string($con, $_POST['state']) : '';
+    $zipcode = isset($_POST['zipcode']) ? mysqli_real_escape_string($con, $_POST['zipcode']) : '';
     $country = mysqli_real_escape_string($con, $_POST['country']);
     $preference = isset($_POST['preference']) ? mysqli_real_escape_string($con, $_POST['preference']) : '';
-    $bitcoin =isset($_POST['bit']) ?  mysqli_real_escape_string($con, $_POST['bit']) : '';
+    $bitcoin = isset($_POST['bit']) ? mysqli_real_escape_string($con, $_POST['bit']) : '';
 
     $status = "OK";
     $msg = "";
@@ -158,7 +153,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['email']) && isset($_PO
     //Test if it is a shared client
     if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
         $ip = $_SERVER['HTTP_CLIENT_IP'];
-    //Is it a proxy address
+        //Is it a proxy address
     } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
         $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
     } else {
@@ -226,7 +221,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['email']) && isset($_PO
     if ($status == "OK") {
         $scode = rand(1111111111, 9999999999); //generating random code, this will act as signup key
         $userId = generateUserId($con);
-        $result = mysqli_query($con, "insert into affiliateuser(password,fname,lname,address,email,referedby,preference,bitcoin,ipaddress,mobile,doj,city,state,country,signupcode,tamount,expiry,active,user_id) values('$password','$name','$lname','$address','$email','$ref','$preference','$bitcoin','$ip','$mobile','$cur','$city','$state','$country','$scode','$sbonus','$expiry','$active','$userId')");
+        $result = mysqli_query($con, "insert into affiliateuser(password,fname,lname,address,email,referedby,preference,bitcoin,ipaddress,mobile,doj,city,state,country,signupcode,tamount,expiry,active,user_id,zipcode) values('$password','$name','$lname','$address','$email','$ref','$preference','$bitcoin','$ip','$mobile','$cur','$city','$state','$country','$scode','$sbonus','$expiry','$active','$userId','$zipcode')");
 
         $query = mysqli_query($con, "SELECT * FROM affiliateuser WHERE `email` = '$email'");
         $currentUser = mysqli_fetch_assoc($query);
@@ -605,61 +600,6 @@ td[class="spechide"]
 
 }
 ?>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $("input[name='email']").keyup(function () {
-            var email = $(this).val();
-
-            if (email.length > 3) {
-                $.ajax({
-                    type: 'POST',
-                    url: 'email-check.php',
-                    data: $(this).serialize(),
-                    success: function (data) {
-                        if (data.trim() !== "") {
-                            html = "<div class='alert alert-danger'>" +
-                                "<button type='button' class='close' data-dismiss='alert'>&times;</button>" +
-                                "<i class='fa fa-ban-circle'></i><strong>Please Fix Below Errors : </br></strong>" + data + "</div>";
-                            $("#email-error").html(html);
-                        } else {
-                            $("#messages").html(null);
-                        }
-                    }
-                });
-                return false;
-
-            }
-        });
-
-    });
-</script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $("#referral").keyup(function () {
-            var referral = $(this).val();
-
-            if (referral.length > 3) {
-                $("#results").html('checking...');
-
-                $.ajax({
-
-                    type: 'POST',
-                    url: 'sname-check.php',
-                    data: $(this).serialize(),
-                    success: function (data) {
-                        $("#results").html(data);
-                    }
-                });
-                return false;
-
-            }
-            else {
-                $("#results").html('');
-            }
-        });
-
-    });
-</script>
 
 
 <div class="container-fluid no-left-right-padding" id="login_backgroud">
@@ -692,21 +632,13 @@ td[class="spechide"]
                             <span id="results" style="margin-top: 0px !important;display: block;"></span>
                         </div>
                         <div class="form-group col-xs-12 signp-group no-left-right-padding" id="left_right_pos">
-                            <!-- <div class="col-xs-2 no-left-right-padding" id="placement_position_div">
-                               <label style="">Placement Position :</label>
-                             </div>-->
                             <div class="col-xs-4" id="first_radio_div">
-
-                                <!--<input id="radio1" name="preference" ng-model="vm.customerCreate.Position" value="Left" type="checkbox" tabindex="5" data-validationtype="required" ng-disabled="vm.maindischeck" class="ng-valid ng-not-empty ng-dirty ng-touched">
-                                &nbsp;<span>LEFT</span>-->
                                 <input id="radio1" name="preference" ng-model="vm.customerCreate.Position" value="Left"
                                        type="checkbox" tabindex="5" data-validationtype="required"
                                        ng-disabled="vm.maindischeck" class="ng-valid ng-not-empty ng-dirty ng-touched"/>
                                 <label for="radio1">LEFT</label>
                             </div>
                             <div class="col-xs-4" id="second_radio_div">
-                                <!-- <input id="radio2" name="preference" type="checkbox" value="Right" ng-model="vm.customerCreate.Position" tabindex="6" ng-disabled="vm.maindischeck" class="ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched">
-                                 &nbsp;<span>RIGHT</span>-->
                                 <input id="radio2" name="preference" type="checkbox" value="Right"
                                        ng-model="vm.customerCreate.Position" tabindex="6" ng-disabled="vm.maindischeck"
                                        class="ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched"/>
@@ -718,7 +650,7 @@ td[class="spechide"]
                                  id="first_name_div">
                                 <label>First Name*</label>
                                 <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-pencil-alt"></i></span>
+                                    <span class="input-group-addon"><i class="fa fa-edit"></i></span>
                                     <input type="text" class="form-control input-box" data-required="true" name="fname"
                                            required>
                                 </div>
@@ -726,7 +658,7 @@ td[class="spechide"]
                             <div class="col-sm-6 col-xs-12 no-left-padding form-group  signp-group" id="last_name_div">
                                 <label>Last Name*</label>
                                 <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-pencil-alt"></i></span>
+                                    <span class="input-group-addon"><i class="fa fa-edit"></i></span>
                                     <input type="text" class="form-control input-box" data-required="true" name="lname"
                                            required>
                                 </div>
@@ -760,6 +692,38 @@ td[class="spechide"]
                                 </select>
                             </div>
                         </div>
+                        <div class="form-group col-xs-12 signp-group no-left-right-padding">
+                            <label>Province/State*</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-industry"></i></span>
+
+                                <select data-required="true" disabled="disabled" class="form-control nopadding input-box" name="state"
+                                        required>
+                                    <option value="">--Select State--</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-xs-8 signp-group">
+                                <label>City*</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-square"></i></span>
+
+                                    <select data-required="true" disabled="disabled" class="form-control nopadding input-box" name="city"
+                                            required>
+                                        <option value="">--Select City--</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group col-xs-4 signp-group no-right-padding">
+                                <label>PIN Code*</label>
+                                <div class="input-group">
+<!--                                    <span class="input-group-addon"><i class="fa fa-flag"></i></span>-->
+                                    <input data-required="true" class="form-control input-box" name="zipcode"
+                                            required>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <?php
                     if (isset($_GET["aff"])) {
@@ -767,15 +731,6 @@ td[class="spechide"]
                         $_SESSION['aff'] = $aff;
                     }
                     ?>
-
-
-                    <!--<div class="form-group col-xs-12 signp-group no-left-right-padding">
-                        <label>Address (Optional)</label>
-                         <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
-                            <input type="text" class="form-control input-box" data-required="true" name="bit" value="" (Optional)">
-                        </div>
-                    </div>-->
                     <div class="form-group col-xs-12 signp-group no-left-right-padding">
                         <label>Password*</label>
                         <div class="input-group">
@@ -795,17 +750,13 @@ td[class="spechide"]
                     </div>
 
                     <div class="col-xs-12 signp-group no-left-right-padding" id="terms_n_cond_in_reg">
-
                         <div class="col-xs-12 no-left-right-padding">
-
-
                             <input id="box1" type="checkbox" data-required="true" required/>
                             <label for="box1"><span>I agree to the <a href="terms-condition.php" class="text-info">Terms of Service</a></span></label>
-
                         </div>
                     </div>
                     <div class="col-xs-12 no-left-right-padding lter">
-                        <button type="submit" class="btn btn-s-xs" id="signup_btn">Register</button>
+                        <button type="submit" class="btn btn-s-xs" disabled="disabled" id="signup_btn">Register</button>
                     </div>
                     <div class="col-xs-12">
                         <p class="text-muted text-center">
@@ -828,6 +779,232 @@ td[class="spechide"]
 </div>
 </div>
 <?php require('footer.php'); ?>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var referral = $("#referral");
+        var firstname = $('input[name="fname"]');
+        var lastname = $('input[name="lname"]');
+        var phone = $("#phone");
+        var left = $('#radio1');
+        var right = $('#radio2');
+        var country = $('select[name="country"]');
+        var state = $('select[name="state"]');
+        var city = $('select[name="city"]');
+        var zipcode = $('input[name="zipcode"]');
+        var email = $("input[name='email']");
+        var password = $("input[name='password']");
+        var confirmPassword = $("input[name='password2']");
+        var term = $("#box1");
+
+        function validateForm() {
+            var referalValid = referral.parent().parent().hasClass('has-success');
+            var firstnameValid = firstname.val().length > 2;
+            var lastnameValid = lastname.val().length > 2;
+            var phoneValid = phone.parent().parent().hasClass('has-success');
+            var radioValid = left.is(':checked') || right.is(':checked');
+            var countryValid = country.val() != '';
+            var stateValid = state.val() != '';
+            var cityValid = city.val() != '';
+            var zipcodeValid = zipcode.val().length > 2;
+            var emailValid = email.parent().parent().hasClass('has-success');
+            var passwordValid = password.parent().parent().hasClass('has-success');
+            var confirmPasswordValid = confirmPassword.parent().parent().hasClass('has-success');
+            var termValid = term.is(':checked');
+
+            console.log(referalValid ,  firstnameValid ,  lastnameValid ,  phoneValid ,  radioValid ,  countryValid ,  termValid , 
+                stateValid ,  cityValid ,  zipcodeValid ,  emailValid ,  passwordValid ,  confirmPasswordValid);
+            
+            if (referalValid && firstnameValid && lastnameValid && phoneValid && radioValid && countryValid && termValid &&
+                stateValid && cityValid && zipcodeValid && emailValid && passwordValid && confirmPasswordValid) {
+                $('#signup_btn').removeAttr('disabled');
+            } else {
+                $('#signup_btn').attr('disabled', 'disabled');
+            }
+        }
+
+        function validEmail(v) {
+            var pattern = /^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i;
+            return pattern.test(v);
+        }
+
+        /** INPUT VALIDATION **/
+        firstname.keyup(function () {
+            validateForm();
+        });
+        lastname.keyup(function () {
+            validateForm();
+        });
+        city.change(function () {
+            validateForm();
+        });
+        zipcode.keyup(function () {
+            validateForm();
+        });
+        term.click(function () {
+            validateForm();
+        });
+        referral.keyup(function () {
+            referral.parent().parent().removeClass('has-error').removeClass('has-success');
+            if (referral.val().length > 3) {
+                console.log('sss');
+                $("#results").html('checking...');
+                $.ajax({
+                    type: 'POST',
+                    url: 'api/sname.php',
+                    data: $(this).serialize(),
+                    success: function (data) {
+                        $("#results").html(data);
+                        if (data == "<span style='color:brown;'>Sponsor ID does not exist</span>") {
+                            referral.parent().parent().removeClass('has-error').removeClass('has-success').addClass('has-error');
+                        } else {
+                            referral.parent().parent().removeClass('has-error').removeClass('has-success').addClass('has-success');
+                        }
+                    }
+                });
+                validateForm();
+                return false;
+            }
+            else {
+                $("#results").html('');
+                referral.parent().parent().removeClass('has-error').removeClass('has-success').addClass('has-error');
+                validateForm();
+            }
+        });
+        email.keyup(function () {
+            email.parent().parent().removeClass('has-error').removeClass('has-success');
+            $("#email-error").html(null);
+
+            if (email.val().length > 3 && validEmail(email.val())) {
+                $.ajax({
+                    type: 'POST',
+                    url: 'api/email.php',
+                    data: $(this).serialize(),
+                    success: function (data) {
+                        if (data.trim() !== "") {
+                            html = "<div class='alert alert-danger'>" +
+                                "<button type='button' class='close' data-dismiss='alert'>&times;</button>" +
+                                "<i class='fa fa-ban-circle'></i><strong>Please Fix Below Errors : </br></strong>" + data + "</div>";
+                            $("#email-error").html(html);
+                            email.parent().parent().removeClass('has-error').removeClass('has-success').addClass('has-error');
+                        } else {
+                            $("#email-error").html(null);
+                            email.parent().parent().removeClass('has-error').removeClass('has-success').addClass('has-success');
+                        }
+                    }
+                });
+
+                validateForm();
+                return false;
+            }
+            email.parent().parent().removeClass('has-error').removeClass('has-success').addClass('has-error');
+            validateForm();
+        });
+        phone.keyup(function () {
+            var phoneNo = phone.val();
+            var res = phoneNo.substring(0, 3);
+            var length = phoneNo.length;
+
+            phone.parent().parent().removeClass('has-error').removeClass('has-success')
+            if (res == '+91') {
+                $('#phone').attr('maxlength', '13');
+                if (length != 13) {
+                    phone.parent().parent().removeClass('has-error').removeClass('has-success').addClass('has-error');
+                } else {
+                    phone.parent().parent().removeClass('has-error').removeClass('has-success').addClass('has-success');
+                }
+            } else {
+                $('#phone').removeAttr('maxlength');
+                if (length > 3) {
+                    phone.parent().parent().removeClass('has-error').removeClass('has-success').addClass('has-success');
+                } else {
+                    phone.parent().parent().removeClass('has-error').removeClass('has-success').addClass('has-error');
+                }
+            }
+            validateForm();
+        });
+        password.keyup(function () {
+            password.parent().parent().removeClass('has-error').removeClass('has-success');
+            if (password.val().length < 5) {
+                password.parent().parent().removeClass('has-error').removeClass('has-success').addClass('has-error');
+            } else {
+                password.parent().parent().removeClass('has-error').removeClass('has-success').addClass('has-success');
+            }
+            validateForm();
+        });
+        confirmPassword.keyup(function () {
+            confirmPassword.parent().parent().removeClass('has-error').removeClass('has-success');
+            if (confirmPassword.val().length >= 5 && confirmPassword.val() == password.val()) {
+                confirmPassword.parent().parent().removeClass('has-error').removeClass('has-success').addClass('has-success');
+            } else {
+                confirmPassword.parent().parent().removeClass('has-error').removeClass('has-success').addClass('has-error');
+            }
+            validateForm();
+        });
+
+        $('#radio1').click(function () {
+            if ($('#radio1').is(':checked')) {
+                $('#radio2').prop('checked', false);
+            }
+            validateForm();
+        });
+
+
+        $('#radio2').click(function () {
+            if ($('#radio2').is(':checked')) {
+                $('#radio1').prop('checked', false);
+            }
+            validateForm();
+        });
+
+        /** State, city autofill **/
+        country.change(function (e, v) {
+            var countryId = $('option:selected', this).attr('country-id');
+            state.attr('disabled', 'disabled').children('option:not(:first)').remove();
+            city.attr('disabled', 'disabled').children('option:not(:first)').remove();
+            $.ajax({
+                type: 'POST',
+                url: 'api/address.php',
+                data: {id: countryId, type: 'get_state'},
+                success: function (data) {
+                    data = JSON.parse(data);
+                    $.each(data, function (k, v) {
+                        state.append($("<option></option>")
+                            .attr("value", v.name)
+                            .attr("state-id", v.id)
+                            .text(v.name));
+                    });
+                    state.removeAttr('disabled');
+
+                    validateForm();
+                }
+            });
+            validateForm();
+            return false;
+        });
+        state.change(function (e, v) {
+            var stateId = $('option:selected', this).attr('state-id');
+            city.attr('disabled', 'disabled').children('option:not(:first)').remove();
+            $.ajax({
+                type: 'POST',
+                url: 'api/address.php',
+                data: {id: stateId, type: 'get_city'},
+                success: function (data) {
+                    data = JSON.parse(data);
+                    $.each(data, function (k, v) {
+                        city.append($("<option></option>")
+                            .attr("value", v.name)
+                            .text(v.name));
+                    });
+                    city.removeAttr('disabled');
+
+                    validateForm();
+                }
+            });
+            validateForm();
+            return false;
+        });
+    });
+</script>
 <script type="text/javascript" src="js_live/intlTelInput.min.js"></script>
 <script>
     $(function () {
@@ -837,13 +1014,6 @@ td[class="spechide"]
             autoPlaceholder: "",
             dropdownContainer: "body",
             formatOnDisplay: false,
-            // geoIpLookup: function (callback) {
-            //     $.get("http://ipinfo.io", function () {
-            //     }, "jsonp").always(function (resp) {
-            //         var countryCode = (resp && resp.country) ? resp.country : "";
-            //         callback(countryCode);
-            //     });
-            // },
             hiddenInput: "full_number",
             initialCountry: "in",
             nationalMode: false,
@@ -851,33 +1021,6 @@ td[class="spechide"]
             preferredCountries: ['in', 'jp'],
             separateDialCode: false,
             utilsScript: "build/js/utils.js"
-        });
-        $('#phone').keyup(function () {
-
-            var phone = $('#phone').val();
-            var res = phone.substring(0, 3);
-            var length = phone.length;
-            if (res == '+91') {
-                $('#phone').attr('maxlength', '13');
-            }
-            else {
-
-                $('#phone').removeAttr('maxlength');
-
-            }
-        });
-
-        $('#radio1').click(function () {
-            if ($('#radio1').is(':checked')) {
-                $('#radio2').prop('checked', false);
-            }
-        });
-
-
-        $('#radio2').click(function () {
-            if ($('#radio2').is(':checked')) {
-                $('#radio1').prop('checked', false);
-            }
         });
 
 

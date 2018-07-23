@@ -1,5 +1,5 @@
 <?php
-include_once 'db/connection_pdo.php';
+include_once '../db/connection_pdo.php';
 if ($_POST) {
     $referral = strip_tags($_POST['referral']);
 
