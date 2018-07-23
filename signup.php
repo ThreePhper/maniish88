@@ -810,9 +810,6 @@ td[class="spechide"]
             var passwordValid = password.parent().parent().hasClass('has-success');
             var confirmPasswordValid = confirmPassword.parent().parent().hasClass('has-success');
             var termValid = term.is(':checked');
-
-            console.log(referalValid ,  firstnameValid ,  lastnameValid ,  phoneValid ,  radioValid ,  countryValid ,  termValid , 
-                stateValid ,  cityValid ,  zipcodeValid ,  emailValid ,  passwordValid ,  confirmPasswordValid);
             
             if (referalValid && firstnameValid && lastnameValid && phoneValid && radioValid && countryValid && termValid &&
                 stateValid && cityValid && zipcodeValid && emailValid && passwordValid && confirmPasswordValid) {
@@ -881,10 +878,7 @@ td[class="spechide"]
                     data: $(this).serialize(),
                     success: function (data) {
                         if (data.trim() !== "") {
-                            html = "<div class='alert alert-danger'>" +
-                                "<button type='button' class='close' data-dismiss='alert'>&times;</button>" +
-                                "<i class='fa fa-ban-circle'></i><strong>Please Fix Below Errors : </br></strong>" + data + "</div>";
-                            $("#email-error").html(html);
+                            $("#email-error").html(data);
                             email.parent().parent().removeClass('has-error').removeClass('has-success').addClass('has-error');
                         } else {
                             $("#email-error").html(null);

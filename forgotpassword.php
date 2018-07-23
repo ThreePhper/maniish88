@@ -1,13 +1,5 @@
 <?php
 require_once 'header.php';
-?>
-    <style>
-        #login_header, label, #log-btn, input {
-            font-family: 'Arsenal', sans-serif !important;
-        }
-
-    </style>
-<?php
 include_once("db/connection_mysqli.php");
 
 $msg = "";

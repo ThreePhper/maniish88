@@ -2520,3 +2520,23 @@ h3 {
 .form-control {
     color: black;
 }
+
+.signup-page .has-success .input-group-addon {
+    color: inherit;
+    background-color: inherit;
+    border-color: #ccc;
+}
+
+.signup-page .has-success .form-control {
+    border-color: #ccc;
+    /*-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);*/
+    /*box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);*/
+}
+.signup-page .form-control:focus {
+    border-color: #139ff0;
+}
+
+.signup-page .form-control:focus, .signup-page .has-error .form-control {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
