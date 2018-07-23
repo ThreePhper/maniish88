@@ -3,7 +3,7 @@ include_once '../db/connection_pdo.php';
 if ($_POST) {
     $referral = strip_tags($_POST['referral']);
 
-    $stmt = $con->prepare("SELECT email,fname,lname FROM affiliateuser WHERE user_id=:referral");
+    $stmt = $con->prepare("SELECT email,fname,lname FROM affiliateuser WHERE BINARY user_id=:referral");
     $stmt->execute(array(':referral' => $referral));
     $count = $stmt->rowCount();
     $user = $stmt->fetch(PDO::FETCH_ASSOC);

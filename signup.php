@@ -843,7 +843,6 @@ td[class="spechide"]
         referral.keyup(function () {
             referral.parent().parent().removeClass('has-error').removeClass('has-success');
             if (referral.val().length > 3) {
-                console.log('sss');
                 $("#results").html('checking...');
                 $.ajax({
                     type: 'POST',
@@ -896,22 +895,28 @@ td[class="spechide"]
         phone.keyup(function () {
             var phoneNo = phone.val();
             var res = phoneNo.substring(0, 3);
+            var number = phoneNo.substring(2);
             var length = phoneNo.length;
 
-            phone.parent().parent().removeClass('has-error').removeClass('has-success')
-            if (res == '+91') {
-                $('#phone').attr('maxlength', '13');
-                if (length != 13) {
-                    phone.parent().parent().removeClass('has-error').removeClass('has-success').addClass('has-error');
-                } else {
-                    phone.parent().parent().removeClass('has-error').removeClass('has-success').addClass('has-success');
-                }
+            if (number.match(/^[0-9]+$/) == null) {
+                phone.val(res);
+                phone.parent().parent().removeClass('has-error').removeClass('has-success').addClass('has-error');
             } else {
-                $('#phone').removeAttr('maxlength');
-                if (length > 3) {
-                    phone.parent().parent().removeClass('has-error').removeClass('has-success').addClass('has-success');
+                phone.parent().parent().removeClass('has-error').removeClass('has-success')
+                if (res == '+91') {
+                    $('#phone').attr('maxlength', '13');
+                    if (length != 13) {
+                        phone.parent().parent().removeClass('has-error').removeClass('has-success').addClass('has-error');
+                    } else {
+                        phone.parent().parent().removeClass('has-error').removeClass('has-success').addClass('has-success');
+                    }
                 } else {
-                    phone.parent().parent().removeClass('has-error').removeClass('has-success').addClass('has-error');
+                    $('#phone').removeAttr('maxlength');
+                    if (length > 3) {
+                        phone.parent().parent().removeClass('has-error').removeClass('has-success').addClass('has-success');
+                    } else {
+                        phone.parent().parent().removeClass('has-error').removeClass('has-success').addClass('has-error');
+                    }
                 }
             }
             validateForm();

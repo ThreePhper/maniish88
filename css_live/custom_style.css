@@ -38,7 +38,7 @@ border: 1px solid black;}
 ************************************************************************************************************************************************************************************************************/
 #ban_img{width:100%;}
 .full_width {position: relative;}
-a {
+.navi-bar a {
     color: #fff;
     text-decoration: none;
     !important vertical-align: baseline;

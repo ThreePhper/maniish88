@@ -15,7 +15,7 @@ body {
 	overflow-x:hidden;
 }
 
-a {
+footer a {
     color: #fff;
     text-decoration: none;
     !important vertical-align: baseline;
@@ -2521,22 +2521,33 @@ h3 {
     color: black;
 }
 
-.signup-page .has-success .input-group-addon {
+.signup-page .has-success .input-group-addon, .signup-page .has-error .input-group-addon {
     color: inherit;
-    background-color: inherit;
+    background-color: #eee;
     border-color: #ccc;
 }
 
-.signup-page .has-success .form-control {
+.signup-page .has-success .form-control, .signup-page .has-error .form-control {
     border-color: #ccc;
     /*-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);*/
     /*box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);*/
 }
 .signup-page .form-control:focus {
-    border-color: #139ff0;
+    border-color: #ccc;
 }
 
 .signup-page .form-control:focus, .signup-page .has-error .form-control {
     -webkit-box-shadow: none;
     box-shadow: none;
+}
+
+.signup-page .has-error .form-control {
+    color: inherit;
+}
+
+.learn-more-page .step-title a {
+    color: black;
+}
+.learn-more-page a:hover {
+    color: #D37F27;
 }
