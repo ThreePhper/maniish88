@@ -324,7 +324,10 @@ margin-bottom: 0px;}
 	margin-top:20px !important;
 	margin-bottom:0px;
 }
-.work{margin-bottom:45px;}
+.work {
+    margin-top: 100px;
+    margin-bottom: 120px;
+}
 .invest p {
     color: #444444;
     font-weight: normal;
