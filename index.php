@@ -12,7 +12,7 @@
   </script>
 <div class="container-fluid full_width no-left-right-padding">
 	<img src="image/FULL.jpg" class="img-responsive" alt="work_image" id="ban_img">
-		<a href="learnmore.php">
+		<a href="getincome.php">
 			<img src="image/get_income.png" class="get_income">
 			</a>
 			<a target="_blank" href="https://www.youtube.com/" class="">

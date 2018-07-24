@@ -305,59 +305,6 @@ require_once 'header.php';
 require_once 'footer.php';
 ?>
 <script>
-$( document ).ready(function() {
-	var percentage_extra = 1.00;
-	var daily_percentage = 0.02;
-
-	$("#money").keydown(function(event) {
-		if (event.shiftKey == true) {
-			event.preventDefault();
-		}
-
-		if ((event.keyCode >= 48 && event.keyCode <= 57) ||
-			(event.keyCode >= 96 && event.keyCode <= 105) ||
-			event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 37 ||
-			event.keyCode == 39 || event.keyCode == 46 || event.keyCode == 190) {
-
-		} else {
-			event.preventDefault();
-		}
-
-		if ($(this).val().indexOf('.') !== -1 && event.keyCode == 190)
-			event.preventDefault();
-	});
-
-	$("#money").keyup(function(event) {
-		if($(this).val() > 0){
-			money = parseFloat($(this).val());
-
-			if(money <= 499){
-				daily_percentage = 0.01;
-			}else if(money >= 500){
-				daily_percentage = 0.020;
-			}
-
-
-			daily_rate =(money * daily_percentage);
-			//hourly_rate = parseFloat(daily_rate / 24);
-			
-			var truncated = Math.floor(parseFloat(daily_rate / 24) * 100) / 100;
-			hourly_rate = truncated;
-
-			total = money + (money * 1.0);
-
-			$("#profitHourly").text(hourly_rate + ' USD');
-			$("#profitDaily").text( daily_rate + ' USD');
-			$("#profitMonthly").text( total + ' USD');
-		} else {
-			$("#profitHourly").text('0 USD');
-			$("#profitDaily").text('0 USD');
-			$("#profitMonthly").text('0 USD');
-		}
-	});
-});
-</script>
-<script>
 	$('.menu #nav li').removeClass('active');
 	$('.menu #nav .work_menu').addClass('active');
 </script> 

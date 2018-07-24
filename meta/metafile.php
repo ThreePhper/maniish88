@@ -131,3 +131,8 @@ echo '<meta name="viewport" content="width=device-width, initial-scale=1">';
         echo '<meta charset="utf-8">
 		<title>Learn More | Cloud Hashing</title>';
     }
+    else if(basename($_SERVER['PHP_SELF'])=='getincome.php')
+    {
+        echo '<meta charset="utf-8">
+		<title>Get Income | Cloud Hashing</title>';
+    }
