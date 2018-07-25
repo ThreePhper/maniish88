@@ -677,7 +677,7 @@ td[class="spechide"]
                             <label>Mobile No.*</label>
                             <div class="col-lg-12 col-md-12 col-sm-12 no-left-right-padding" id="mob_div">
 
-                                <input id="phone" type="tel" placeholder="" class="form-control input-box"
+                                <input id="phone" type="tel" maxlength="13" placeholder="" class="form-control input-box"
                                        data-type="phone" data-required="true" name="mobile" required>
                             </div>
                         </div>
@@ -779,6 +779,42 @@ td[class="spechide"]
 </div>
 </div>
 <?php require('footer.php'); ?>
+<script type="text/javascript" src="js_live/intlTelInput.min.js"></script>
+<script>
+    $(function () {
+        $("#phone").intlTelInput({
+            allowDropdown: true,
+            autoHideDialCode: false,
+            autoPlaceholder: "",
+            dropdownContainer: "body",
+            formatOnDisplay: false,
+            hiddenInput: "full_number",
+            initialCountry: "in",
+            nationalMode: false,
+            placeholderNumberType: "",
+            preferredCountries: ['in', 'jp'],
+            separateDialCode: false,
+            utilsScript: "build/js/utils.js"
+        });
+
+
+        $('#eye_sym').click(function () {
+            var attr = $(this).prev().attr('type');
+            if (attr == 'password') {
+                $('#pwd').attr('type', 'text');
+
+                $('#eye_sym').children('i').removeClass('fa-lock');
+                $('#eye_sym').children('i').addClass('fa-eye-slash');
+            }
+            if (attr == 'text') {
+                $('#pwd').attr('type', 'password');
+                $('#eye_sym').children('i').removeClass('fa-eye-slash');
+                $('#eye_sym').children('i').addClass('fa-lock');
+            }
+        });
+    });
+</script>
+
 <script type="text/javascript">
     $(document).ready(function () {
         var referral = $("#referral");
@@ -842,6 +878,13 @@ td[class="spechide"]
         });
         referral.keyup(function () {
             referral.parent().parent().removeClass('has-error').removeClass('has-success');
+
+            var sponsorID = referral.val();
+            if (sponsorID.match(/^[0-9a-zA-Z]+$/) == null) {
+                referral.val(sponsorID.substring(0, parseInt(sponsorID.length) - 1));
+                referral.parent().parent().removeClass('has-error').removeClass('has-success').addClass('has-error');
+            }
+            validateForm();
             if (referral.val().length > 3) {
                 $("#results").html('checking...');
                 $.ajax({
@@ -892,32 +935,23 @@ td[class="spechide"]
             email.parent().parent().removeClass('has-error').removeClass('has-success').addClass('has-error');
             validateForm();
         });
+
+        $("#phone").on("countrychange", function (e, countryData) {
+            if (countryData.dialCode != '91') {
+                $('#phone').attr('maxlength', countryData.dialCode.length + 12 + 1); //plus 1 for + char
+            } else {
+                $('#phone').attr('maxlength', countryData.dialCode.length + 10 + 1);
+            }
+        });
         phone.keyup(function () {
             var phoneNo = phone.val();
             var res = phoneNo.substring(0, 3);
             var number = phoneNo.substring(2);
-            var length = phoneNo.length;
+            var length = parseInt(phoneNo.length);
 
             if (number.match(/^[0-9]+$/) == null) {
-                phone.val(res);
+                phone.val(phoneNo.substring(0, length - 1));
                 phone.parent().parent().removeClass('has-error').removeClass('has-success').addClass('has-error');
-            } else {
-                phone.parent().parent().removeClass('has-error').removeClass('has-success')
-                if (res == '+91') {
-                    $('#phone').attr('maxlength', '13');
-                    if (length != 13) {
-                        phone.parent().parent().removeClass('has-error').removeClass('has-success').addClass('has-error');
-                    } else {
-                        phone.parent().parent().removeClass('has-error').removeClass('has-success').addClass('has-success');
-                    }
-                } else {
-                    $('#phone').removeAttr('maxlength');
-                    if (length > 3) {
-                        phone.parent().parent().removeClass('has-error').removeClass('has-success').addClass('has-success');
-                    } else {
-                        phone.parent().parent().removeClass('has-error').removeClass('has-success').addClass('has-error');
-                    }
-                }
             }
             validateForm();
         });
@@ -1001,41 +1035,6 @@ td[class="spechide"]
             });
             validateForm();
             return false;
-        });
-    });
-</script>
-<script type="text/javascript" src="js_live/intlTelInput.min.js"></script>
-<script>
-    $(function () {
-        $("#phone").intlTelInput({
-            allowDropdown: true,
-            autoHideDialCode: false,
-            autoPlaceholder: "",
-            dropdownContainer: "body",
-            formatOnDisplay: false,
-            hiddenInput: "full_number",
-            initialCountry: "in",
-            nationalMode: false,
-            placeholderNumberType: "",
-            preferredCountries: ['in', 'jp'],
-            separateDialCode: false,
-            utilsScript: "build/js/utils.js"
-        });
-
-
-        $('#eye_sym').click(function () {
-            var attr = $(this).prev().attr('type');
-            if (attr == 'password') {
-                $('#pwd').attr('type', 'text');
-
-                $('#eye_sym').children('i').removeClass('fa-lock');
-                $('#eye_sym').children('i').addClass('fa-eye-slash');
-            }
-            if (attr == 'text') {
-                $('#pwd').attr('type', 'password');
-                $('#eye_sym').children('i').removeClass('fa-eye-slash');
-                $('#eye_sym').children('i').addClass('fa-lock');
-            }
         });
     });
 </script>
